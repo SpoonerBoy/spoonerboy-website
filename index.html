@@ -1,82 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta property="og:title" content="Spoonerboy - Official Website">
-    <meta property="og:description" content="Join the Spoonerboy community! Connect on social media or share your feedback.">
-    <meta property="og:image" content="https://spoonerboy.com/spoonerboy-avatar.png">
-    <meta property="og:url" content="https://spoonerboy.com">
-    <meta property="og:type" content="website">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Spoonerboy's official website! Connect on Instagram, Discord, and TikTok, or leave feedback.">
-    <title>Spoonerboy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #1e3a8a, #7e22ce);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Arial', sans-serif;
-        }
-        .header-img {
-            animation: fadeIn 1s ease-in-out;
-        }
-        .hero {
-            animation: slideUp 1s ease-in-out;
-        }
-        .social-icon, .nav-link {
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-        .social-icon:hover {
-            transform: scale(1.2);
-            color: #fff;
-        }
-        .nav-link:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Spoonerboy Portfolio">
+  <meta property="og:description" content="Official portfolio of Spoonerboy, a creative artist.">
+  <meta property="og:image" content="/spoonerboy-avatar.png">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
+  <title>index.html</title>
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <style>
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes slideUp {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .fadeIn { animation: fadeIn 1s ease-in; }
+    .slideUp { animation: slideUp 1s ease-out; }
+  </style>
 </head>
-<body class="text-white">
-    <header class="flex justify-center py-6 bg-black bg-opacity-40">
-        <img src="/spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="h-36 md:h-48 rounded-full object-cover shadow-lg header-img">
-    </header>
+<body class="bg-gradient-to-r from-indigo-800 via-purple-700 to-blue-600 text-white">
 
-    <nav class="flex justify-between items-center px-6 py-4 bg-black bg-opacity-30">
-        <h1 class="text-2xl md:text-3xl font-bold">Spoonerboy</h1>
-        <div class="flex space-x-6 items-center">
-            <a href="/index.html" class="nav-link text-lg md:text-xl">Home</a>
-            <a href="/feedback.html" class="nav-link text-lg md:text-xl">Feedback</a>
-            <a href="https://www.instagram.com/spoonerboy1tap" target="_blank" class="social-icon text-xl md:text-2xl text-pink-400">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://discord.gg/yourinvitecode" target="_blank" class="social-icon text-xl md:text-2xl text-blue-400">
-                <i class="fab fa-discord"></i>
-            </a>
-            <a href="https://www.tiktok.com/@spoonerboy1tap" target="_blank" class="social-icon text-xl md:text-2xl text-black">
-                <i class="fab fa-tiktok"></i>
-            </a>
-        </div>
-    </nav>
+  <header class="text-center py-12">
+    <img src="/spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="w-32 h-32 mx-auto rounded-full mb-4 fadeIn">
+    <h1 class="text-4xl font-bold">Spoonerboy</h1>
+    <p class="text-xl">Creative Portfolio</p>
+  </header>
 
-    <main class="hero flex flex-col items-center justify-center text-center flex-grow px-4 py-12">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to Spoonerboy</h1>
-        <p class="text-lg md:text-xl mb-8 max-w-2xl">Join my community! Connect on social media or share your thoughts with feedback.</p>
-        <a href="/feedback.html" class="bg-white text-purple-800 px-6 py-3 rounded-full text-lg md:text-xl font-semibold hover:bg-purple-200 transition duration-300">Leave Feedback</a>
-    </main>
+  <nav class="bg-opacity-70 py-4">
+    <div class="container mx-auto flex justify-center space-x-6">
+      <a href="/" class="text-white hover:text-yellow-400 transition-all">Home</a>
+      <a href="/feedback.html" class="text-white hover:text-yellow-400 transition-all">Feedback</a>
+    </div>
+  </nav>
 
-    <footer class="text-center py-4 bg-black bg-opacity-40">
-        <p class="text-sm md:text-base">© 2025 Spoonerboy. All rights reserved.</p>
-    </footer>
+  <section class="mt-12 text-center">
+    <p class="text-xl mb-6">Welcome to my creative world! Explore my work and leave your feedback!</p>
+    
+    <div class="flex justify-center space-x-6">
+      <a href="https://www.instagram.com/spoonerboy1tap" target="_blank" class="text-white hover:text-yellow-400 text-3xl">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://discord.com/invite/placeholder" target="_blank" class="text-white hover:text-yellow-400 text-3xl">
+        <i class="fab fa-discord"></i>
+      </a>
+      <a href="https://www.tiktok.com/@spoonerboy1tap" target="_blank" class="text-white hover:text-yellow-400 text-3xl">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer class="mt-16 py-4 text-center text-sm">
+    <p>&copy; 2025 Spoonerboy | All Rights Reserved</p>
+  </footer>
+
 </body>
 </html>
