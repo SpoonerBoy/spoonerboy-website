@@ -1,79 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Spoonerboy Portfolio">
-  <meta property="og:description" content="Official portfolio of Spoonerboy, a creative artist.">
-  <meta property="og:image" content="/spoonerboy-avatar.png">
-  <meta property="og:url" content="https://yourdomain.com">
+  <!-- Basic Metadata -->
+  <meta name="description" content="Join SpoonerBoy1tap's gaming hub – Discord, Minecraft, TikTok, and Instagram all in one place!">
+  <meta name="keywords" content="SpoonerBoy1tap, gaming, Minecraft, Discord, TikTok, Instagram, social hub">
+  <meta name="author" content="SpoonerBoy1tap">
+
+  <!-- Open Graph / Facebook / iMessage -->
   <meta property="og:type" content="website">
-  <title>Spoonerboy Portfolio</title>
-  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-  <style>
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    @keyframes slideUp {
-      0% { transform: translateY(30px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    .fadeIn { animation: fadeIn 1s ease-in; }
-    .slideUp { animation: slideUp 1s ease-out; }
-    .scrolling-background {
-      background-size: cover;
-      background-attachment: fixed;
-    }
-    .btn-hover:hover {
-      transform: scale(1.1);
-      transition: transform 0.3s ease;
-    }
-    .btn-shadow {
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      transition: box-shadow 0.3s ease;
-    }
-    .btn-shadow:hover {
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-    }
-  </style>
+  <meta property="og:url" content="https://yourdomain.github.io/">
+  <meta property="og:title" content="SpoonerBoy1tap | Gaming Social Hub">
+  <meta property="og:description" content="Hang out on my Discord, hop into my Minecraft server, and follow me on TikTok & Instagram.">
+  <meta property="og:image" content="https://yourdomain.github.io/preview.jpg"> <!-- Needs to be a hosted image -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://yourdomain.github.io/">
+  <meta name="twitter:title" content="SpoonerBoy1tap | Gaming Social Hub">
+  <meta name="twitter:description" content="Connect with me through Discord, Minecraft, TikTok, and Instagram.">
+  <meta name="twitter:image" content="https://yourdomain.github.io/preview.jpg">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpoonerBoy1tap Social Hub</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Gamer font -->
 </head>
-<body class="bg-gradient-to-r from-indigo-800 via-purple-700 to-blue-600 text-white">
+<body>
+  <div class="container">
+    <h1>SpoonerBoy1tap</h1>
+    <p>Welcome to my gaming hub! Connect with me and join the community.</p>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center scroll-smooth scrolling-background" style="background-image: url('/your-background-image.jpg');">
-    <img src="/spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="w-40 h-40 mx-auto rounded-full mb-6 fadeIn">
-    <h1 class="text-5xl font-extrabold leading-tight mb-4 animate__animated animate__fadeIn">Spoonerboy</h1>
-    <p class="text-xl font-semibold mb-8">The Creative Vision of Spoonerboy</p>
-
-    <!-- Social Media Links with Hover Effects -->
-    <div class="flex justify-center space-x-6 mb-8">
-      <a href="https://www.instagram.com/spoonerboy1tap" target="_blank" class="text-white hover:text-yellow-400 transition-all text-4xl btn-hover">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://discord.com/invite/placeholder" target="_blank" class="text-white hover:text-yellow-400 transition-all text-4xl btn-hover">
-        <i class="fab fa-discord"></i>
-      </a>
-      <a href="https://www.tiktok.com/@spoonerboy1tap" target="_blank" class="text-white hover:text-yellow-400 transition-all text-4xl btn-hover">
-        <i class="fab fa-tiktok"></i>
-      </a>
+    <div class="buttons">
+      <a href="https://discord.gg/YOURINVITE" class="btn">Join Discord</a>
+      <a href="https://minecraft.net/YOURSERVER" class="btn">Minecraft Server</a>
+      <a href="https://www.tiktok.com/@spoonerboy1tap" class="btn">TikTok</a>
+      <a href="https://www.instagram.com/spoonerboy1tap" class="btn">Instagram</a>
+      <a href="mailto:your@email.com" class="btn feedback">Feedback</a>
     </div>
-
-    <a href="/feedback.html" class="text-lg text-yellow-400 font-semibold btn-shadow py-2 px-4 rounded-lg border-2 border-yellow-400 transition-all hover:bg-yellow-400 hover:text-black">Leave Your Feedback</a>
-  </section>
-
-  <!-- About Section -->
-  <section class="py-24 bg-gradient-to-r from-blue-500 to-indigo-600 text-center">
-    <h2 class="text-4xl font-bold text-white mb-8 slideUp">About Me</h2>
-    <p class="text-xl text-white mb-6 px-4">Spoonerboy is an innovative artist who explores the intersection of digital art, creativity, and modern design. I bring my imaginative vision to life through various mediums.</p>
-    <p class="text-lg text-white">Feel free to browse through my work and let me know your thoughts!</p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-4 text-center bg-gray-800 text-sm text-white">
-    <p>&copy; 2025 Spoonerboy | All Rights Reserved</p>
-  </footer>
-
+  </div>
 </body>
 </html>
