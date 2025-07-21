@@ -8,7 +8,7 @@
   <meta property="og:image" content="/spoonerboy-avatar.png">
   <meta property="og:url" content="https://yourdomain.com">
   <meta property="og:type" content="website">
-  <title>index.html</title>
+  <title>Spoonerboy Portfolio</title>
   <link href="https://cdn.tailwindcss.com" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
   <style>
@@ -22,40 +22,56 @@
     }
     .fadeIn { animation: fadeIn 1s ease-in; }
     .slideUp { animation: slideUp 1s ease-out; }
+    .scrolling-background {
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .btn-hover:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+    .btn-shadow {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease;
+    }
+    .btn-shadow:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
   </style>
 </head>
 <body class="bg-gradient-to-r from-indigo-800 via-purple-700 to-blue-600 text-white">
 
-  <header class="text-center py-12">
-    <img src="/spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="w-32 h-32 mx-auto rounded-full mb-4 fadeIn">
-    <h1 class="text-4xl font-bold">Spoonerboy</h1>
-    <p class="text-xl">Creative Portfolio</p>
-  </header>
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center scroll-smooth scrolling-background" style="background-image: url('/your-background-image.jpg');">
+    <img src="/spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="w-40 h-40 mx-auto rounded-full mb-6 fadeIn">
+    <h1 class="text-5xl font-extrabold leading-tight mb-4 animate__animated animate__fadeIn">Spoonerboy</h1>
+    <p class="text-xl font-semibold mb-8">The Creative Vision of Spoonerboy</p>
 
-  <nav class="bg-opacity-70 py-4">
-    <div class="container mx-auto flex justify-center space-x-6">
-      <a href="/" class="text-white hover:text-yellow-400 transition-all">Home</a>
-      <a href="/feedback.html" class="text-white hover:text-yellow-400 transition-all">Feedback</a>
-    </div>
-  </nav>
-
-  <section class="mt-12 text-center">
-    <p class="text-xl mb-6">Welcome to my creative world! Explore my work and leave your feedback!</p>
-    
-    <div class="flex justify-center space-x-6">
-      <a href="https://www.instagram.com/spoonerboy1tap" target="_blank" class="text-white hover:text-yellow-400 text-3xl">
+    <!-- Social Media Links with Hover Effects -->
+    <div class="flex justify-center space-x-6 mb-8">
+      <a href="https://www.instagram.com/spoonerboy1tap" target="_blank" class="text-white hover:text-yellow-400 transition-all text-4xl btn-hover">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://discord.com/invite/placeholder" target="_blank" class="text-white hover:text-yellow-400 text-3xl">
+      <a href="https://discord.com/invite/placeholder" target="_blank" class="text-white hover:text-yellow-400 transition-all text-4xl btn-hover">
         <i class="fab fa-discord"></i>
       </a>
-      <a href="https://www.tiktok.com/@spoonerboy1tap" target="_blank" class="text-white hover:text-yellow-400 text-3xl">
+      <a href="https://www.tiktok.com/@spoonerboy1tap" target="_blank" class="text-white hover:text-yellow-400 transition-all text-4xl btn-hover">
         <i class="fab fa-tiktok"></i>
       </a>
     </div>
+
+    <a href="/feedback.html" class="text-lg text-yellow-400 font-semibold btn-shadow py-2 px-4 rounded-lg border-2 border-yellow-400 transition-all hover:bg-yellow-400 hover:text-black">Leave Your Feedback</a>
   </section>
 
-  <footer class="mt-16 py-4 text-center text-sm">
+  <!-- About Section -->
+  <section class="py-24 bg-gradient-to-r from-blue-500 to-indigo-600 text-center">
+    <h2 class="text-4xl font-bold text-white mb-8 slideUp">About Me</h2>
+    <p class="text-xl text-white mb-6 px-4">Spoonerboy is an innovative artist who explores the intersection of digital art, creativity, and modern design. I bring my imaginative vision to life through various mediums.</p>
+    <p class="text-lg text-white">Feel free to browse through my work and let me know your thoughts!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center bg-gray-800 text-sm text-white">
     <p>&copy; 2025 Spoonerboy | All Rights Reserved</p>
   </footer>
 
