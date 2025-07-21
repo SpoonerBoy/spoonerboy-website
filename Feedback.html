@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leave feedback for Spoonerboy. Share your thoughts and help us improve!">
     <title>Feedback - Spoonerboy</title>
-    <!-- Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
@@ -14,86 +13,81 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+        .header-img {
+            animation: fadeIn 1s ease-in-out;
         }
         .form-section {
-            animation: fadeIn 1s ease-in;
+            animation: slideUp 1s ease-in-out;
         }
-        .social-icon {
+        .social-icon, .nav-link {
             transition: transform 0.3s ease, color 0.3s ease;
         }
         .social-icon:hover {
             transform: scale(1.2);
             color: #fff;
         }
-        .nav-link {
-            transition: color 0.3s ease;
-        }
         .nav-link:hover {
             color: #fff;
+            text-decoration: underline;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
-<body class="text-white font-sans">
-    <!-- Header with Image -->
-    <header class="flex justify-center py-4 bg-opacity-50 bg-black">
-        <img src="spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="h-32 md:h-48 rounded-full object-cover">
+<body class="text-white">
+    <header class="flex justify-center py-6 bg-black bg-opacity-40">
+        <img src="spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="h-36 md:h-48 rounded-full object-cover shadow-lg header-img">
     </header>
 
-    <!-- Navigation Bar -->
-    <nav class="flex justify-between items-center p-4">
-        <h1 class="text-2xl font-bold">Spoonerboy</h1>
-        <div class="flex space-x-4">
-            <a href="index.html" class="nav-link text-lg">Home</a>
-            <a href="feedback.html" class="nav-link text-lg">Feedback</a>
-            <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon text-2xl text-pink-400">
+    <nav class="flex justify-between items-center px-6 py-4 bg-black bg-opacity-30">
+        <h1 class="text-2xl md:text-3xl font-bold">Spoonerboy</h1>
+        <div class="flex space-x-6 items-center">
+            <a href="/index.html" class="nav-link text-lg md:text-xl">Home</a>
+            <a href="/feedback.html" class="nav-link text-lg md:text-xl">Feedback</a>
+            <a href="https://www.instagram.com/spoonerboy1tap" target="_blank" class="social-icon text-xl md:text-2xl text-pink-400">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://discord.gg/yourinvitecode" target="_blank" class="social-icon text-2xl text-blue-400">
+            <a href="https://discord.gg/yourinvitecode" target="_blank" class="social-icon text-xl md:text-2xl text-blue-400">
                 <i class="fab fa-discord"></i>
             </a>
-            <a href="https://www.tiktok.com/@yourusername" target="_blank" class="social-icon text-2xl text-black">
+            <a href="https://www.tiktok.com/@yourusername" target="_blank" class="social-icon text-xl md:text-2xl text-black">
                 <i class="fab fa-tiktok"></i>
             </a>
         </div>
     </nav>
 
-    <!-- Feedback Form Section -->
-    <section class="form-section flex flex-col items-center justify-center text-center py-12 px-4">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">We’d Love Your Feedback!</h2>
-        <p class="text-lg md:text-xl mb-8 max-w-2xl">Tell us what you think about Spoonerboy.com. Your input helps us improve!</p>
-        <div class="w-full max-w-md bg-white bg-opacity-10 p-8 rounded-lg">
-            <div class="space-y-4">
+    <main class="form-section flex flex-col items-center justify-center text-center px-4 py-12">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">Share Your Feedback</h2>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl">Your thoughts help Spoonerboy grow. Let us know what you think!</p>
+        <div class="w-full max-w-md bg-white bg-opacity-20 p-6 md:p-8 rounded-xl shadow-lg">
+            <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-5">
                 <div>
-                    <label for="name" class="block text-sm font-medium">Name</label>
-                    <input type="text" id="name" name="name" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Your name" required>
+                    <label for="name" class="block text-sm md:text-base font-medium mb-1">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 md:p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400 placeholder-gray-400" placeholder="Your name" required>
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium">Email</label>
-                    <input type="email" id="email" name="email" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Your email" required>
+                    <label for="email" class="block text-sm md:text-base font-medium mb-1">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 md:p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400 placeholder-gray-400" placeholder="Your email" required>
                 </div>
                 <div>
-                    <label for="message" class="block text-sm font-medium">Message</label>
-                    <textarea id="message" name="message" rows="5" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Your feedback" required></textarea>
+                    <label for="message" class="block text-sm md:text-base font-medium mb-1">Message</label>
+                    <textarea id="message" name="message" rows="6" class="w-full p-2 md:p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400 placeholder-gray-400" placeholder="Your feedback" required></textarea>
                 </div>
-                <button type="submit" class="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition">Submit Feedback</button>
-            </div>
+                <button type="submit" class="w-full bg-purple-600 text-white py-2 md:py-3 rounded-lg hover:bg-purple-700 transition duration-300 font-semibold">Submit Feedback</button>
+            </form>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="text-center py-4 mt-auto">
-        <p class="text-sm">© 2025 Spoonerboy. All rights reserved.</p>
+    <footer class="text-center py-4 bg-black bg-opacity-40">
+        <p class="text-sm md:text-base">© 2025 Spoonerboy. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your feedback! This form is not yet connected to a backend. Check instructions to set it up.');
-        });
-    </script>
 </body>
 </html>

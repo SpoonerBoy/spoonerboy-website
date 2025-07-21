@@ -3,72 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Spoonerboy's official website! Connect on Instagram, Discord, and TikTok, or leave feedback.">
     <title>Spoonerboy</title>
-    <!-- Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* Custom styles for animations and gradient background */
         body {
             background: linear-gradient(135deg, #1e3a8a, #7e22ce);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+        .header-img {
+            animation: fadeIn 1s ease-in-out;
         }
         .hero {
-            animation: fadeIn 1s ease-in;
+            animation: slideUp 1s ease-in-out;
         }
-        .social-icon {
+        .social-icon, .nav-link {
             transition: transform 0.3s ease, color 0.3s ease;
         }
         .social-icon:hover {
             transform: scale(1.2);
             color: #fff;
         }
+        .nav-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
-<body class="text-white font-sans">
-    <!-- Hero Section -->
-    <section class="hero flex flex-col items-center justify-center text-center h-screen">
-        <h1 class="text-5xl md:text-7xl font-bold mb-4">Welcome to Spoonerboys Website</h1>
-        <p class="text-xl md:text-2xl mb-8">Connect with me on my socials!</p>
-        <!-- Social Media Links -->
-        <div class="flex space-x-6">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/Spoonerboy1tap
+<body class="text-white">
+    <header class="flex justify-center py-6 bg-black bg-opacity-40">
+        <img src="spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="h-36 md:h-48 rounded-full object-cover shadow-lg header-img">
+    </header>
+
+    <nav class="flex justify-between items-center px-6 py-4 bg-black bg-opacity-30">
+        <h1 class="text-2xl md:text-3xl font-bold">Spoonerboy</h1>
+        <div class="flex space-x-6 items-center">
+            <a href="/index.html" class="nav-link text-lg md:text-xl">Home</a>
+            <a href="/feedback.html" class="nav-link text-lg md:text-xl">Feedback</a>
+            <a href="https://www.instagram.com/spoonerboy1tap" target="_blank" class="social-icon text-xl md:text-2xl text-pink-400">
+                <i class="fab fa-instagram"></i>
             </a>
-            <!-- Discord -->
-            <a href="https://discord.gg/NshmSA6U" target="_blank" class="social-icon text-4xl text-blue-400">
+            <a href="https://discord.gg/yourinvitecode" target="_blank" class="social-icon text-xl md:text-2xl text-blue-400">
                 <i class="fab fa-discord"></i>
             </a>
-            <!-- TikTok -->
-            <a href="https://www.tiktok.com/@yourusername" target="_blank" class="social-icon text-4xl text-black">
+            <a href="https://www.tiktok.com/@yourusername" target="_blank" class="social-icon text-xl md:text-2xl text-black">
                 <i class="fab fa-tiktok"></i>
             </a>
         </div>
-    </section>
+    </nav>
 
-    <!-- Footer -->
-    <footer class="text-center py-4 mt-auto">
-        <p class="text-sm">&copy; 2025 Spoonerboy. All rights reserved.</p>
+    <main class="hero flex flex-col items-center justify-center text-center flex-grow px-4 py-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to Spoonerboy</h1>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl">Join my community! Connect on social media or share your thoughts with feedback.</p>
+        <a href="/feedback.html" class="bg-white text-purple-800 px-6 py-3 rounded-full text-lg md:text-xl font-semibold hover:bg-purple-200 transition duration-300">Leave Feedback</a>
+    </main>
+
+    <footer class="text-center py-4 bg-black bg-opacity-40">
+        <p class="text-sm md:text-base">© 2025 Spoonerboy. All rights reserved.</p>
     </footer>
-
-    <!-- Optional JavaScript for interactivity -->
-    <script>
-        // Add smooth scroll or other interactivity if needed
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
