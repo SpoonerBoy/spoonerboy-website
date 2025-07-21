@@ -1,43 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Metadata -->
-  <meta name="description" content="Join SpoonerBoy1tap's gaming hub – Discord, Minecraft, TikTok, and Instagram all in one place!">
-  <meta name="keywords" content="SpoonerBoy1tap, gaming, Minecraft, Discord, TikTok, Instagram, social hub">
-  <meta name="author" content="SpoonerBoy1tap">
-
-  <!-- Open Graph / Facebook / iMessage -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.github.io/">
-  <meta property="og:title" content="SpoonerBoy1tap | Gaming Social Hub">
-  <meta property="og:description" content="Hang out on my Discord, hop into my Minecraft server, and follow me on TikTok & Instagram.">
-  <meta property="og:image" content="https://yourdomain.github.io/preview.jpg"> <!-- Needs to be a hosted image -->
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://yourdomain.github.io/">
-  <meta name="twitter:title" content="SpoonerBoy1tap | Gaming Social Hub">
-  <meta name="twitter:description" content="Connect with me through Discord, Minecraft, TikTok, and Instagram.">
-  <meta name="twitter:image" content="https://yourdomain.github.io/preview.jpg">
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SpoonerBoy1tap Social Hub</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Gamer font -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Spoonerboy's official website! Connect on social media or leave feedback.">
+    <meta property="og:title" content="Spoonerboy - Official Website">
+    <meta property="og:description" content="Join the Spoonerboy community! Connect on social media or share your feedback.">
+    <meta property="og:image" content="https://spoonerboy.com/spoonerboy-avatar.png">
+    <meta property="og:url" content="https://spoonerboy.com">
+    <meta property="og:type" content="website">
+    <title>Spoonerboy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #7e22ce);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+        .header-img {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hero {
+            animation: slideUp 1s ease-in-out;
+        }
+        .social-icon, .nav-link {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #fff;
+        }
+        .nav-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <h1>SpoonerBoy1tap</h1>
-    <p>Welcome to my gaming hub! Connect with me and join the community.</p>
+<body class="text-white">
+    <header class="flex justify-center py-6 bg-black bg-opacity-40">
+        <img src="/spoonerboy-avatar.png" alt="Spoonerboy Avatar" class="h-36 md:h-48 rounded-full object-cover shadow-lg header-img">
+    </header>
 
-    <div class="buttons">
-      <a href="https://discord.gg/YOURINVITE" class="btn">Join Discord</a>
-      <a href="https://minecraft.net/YOURSERVER" class="btn">Minecraft Server</a>
-      <a href="https://www.tiktok.com/@spoonerboy1tap" class="btn">TikTok</a>
-      <a href="https://www.instagram.com/spoonerboy1tap" class="btn">Instagram</a>
-      <a href="mailto:your@email.com" class="btn feedback">Feedback</a>
-    </div>
-  </div>
+    <nav class="flex justify-between items-center px-6 py-4 bg-black bg-opacity-30">
+        <h1 class="text-2xl md:text-3xl font-bold">Spoonerboy</h1>
+        <div class="flex space-x-6 items-center">
+            <a href="/index.html" class="nav-link text-lg md:text-xl">Home</a>
+            <a href="/feedback.html" class="nav-link text-lg md:text-xl">Feedback</a>
+            <a href="https://www.instagram.com/spoonerboy1tap" target="_blank" class="social-icon text-xl md:text-2xl text-pink-400">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://discord.gg/yourinvitecode" target="_blank" class="social-icon text-xl md:text-2xl text-blue-400">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://www.tiktok.com/@yourusername" target="_blank" class="social-icon text-xl md:text-2xl text-black">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="hero flex flex-col items-center justify-center text-center flex-grow px-4 py-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to Spoonerboy</h1>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl">Join my community! Connect on social media or share your thoughts with feedback.</p>
+        <a href="/feedback.html" class="bg-white text-purple-800 px-6 py-3 rounded-full text-lg md:text-xl font-semibold hover:bg-purple-200 transition duration-300">Leave Feedback</a>
+    </main>
+
+    <footer class="text-center py-4 bg-black bg-opacity-40">
+        <p class="text-sm md:text-base">© 2025 Spoonerboy. All rights reserved.</p>
+    </footer>
 </body>
 </html>
