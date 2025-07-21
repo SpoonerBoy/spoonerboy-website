@@ -1,10 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Spoonerboy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoonerboy</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom styles for animations and gradient background */
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #7e22ce);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .hero {
+            animation: fadeIn 1s ease-in;
+        }
+        .social-icon {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #fff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-  <h1>Welcome to Spoonerboy.com!</h1>
-  <p>This is my website.</p>
+<body class="text-white font-sans">
+    <!-- Hero Section -->
+    <section class="hero flex flex-col items-center justify-center text-center h-screen">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">Welcome to Spoonerboys Website</h1>
+        <p class="text-xl md:text-2xl mb-8">Connect with me on my socials!</p>
+        <!-- Social Media Links -->
+        <div class="flex space-x-6">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon text-4xl text-pink-400">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Discord -->
+            <a href="https://discord.gg/yourinvitecode" target="_blank" class="social-icon text-4xl text-blue-400">
+                <i class="fab fa-discord"></i>
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@yourusername" target="_blank" class="social-icon text-4xl text-black">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-auto">
+        <p class="text-sm">&copy; 2025 Spoonerboy. All rights reserved.</p>
+    </footer>
+
+    <!-- Optional JavaScript for interactivity -->
+    <script>
+        // Add smooth scroll or other interactivity if needed
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
