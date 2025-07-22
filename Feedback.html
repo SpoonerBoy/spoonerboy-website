@@ -2,26 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>spoonerboy</title>
+  <title>Feedback – spoonerboy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
+    <a href="/" style="display:inline-block;margin-bottom:1rem;">← Home</a>
     <img id="avatar" src="spoonerboy-avatar.png" alt="spoonerboy avatar"/>
   </header>
 
   <main>
-    <h1>@spoonerboy</h1>
+    <h1>Send feedback</h1>
 
-    <nav id="socials">
-      <a href="https://discord.com/users/spoonerboy1tap" target="_blank" rel="noopener">Discord</a>
-      <a href="https://tiktok.com/@spoonerboy1tap" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://youtube.com/@spoonerboy" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://instagram.com/spoonerboy1tap" target="_blank" rel="noopener">Instagram</a>
-      <p><a href="/feedback.html">Leave feedback</a></p>
+    <form action="https://formspree.io/f/xjkogpkq" method="POST">
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
 
-    </nav>
+      <label>
+        Email
+        <input type="email" name="_replyto" required>
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+
+      <button type="submit">Send</button>
+    </form>
   </main>
 </body>
 </html>
