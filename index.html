@@ -1,27 +1,44 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8">
   <title>spoonerboy</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="One-tap social hub for spoonerboy">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+
+  <!-- OpenGraph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://spoonerboy.com/">
+  <meta property="og:title"       content="spoonerboy">
+  <meta property="og:description" content="One-tap social hub for spoonerboy">
+  <meta property="og:image"       content="https://spoonerboy.com/spoonerboy-avatar.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"         content="spoonerboy">
+  <meta name="twitter:description"   content="One-tap social hub for spoonerboy">
+  <meta name="twitter:image"         content="https://spoonerboy.com/spoonerboy-avatar.png">
+  <meta name="twitter:creator"       content="@spoonerboy1tap">
 </head>
+
 <body>
   <header>
-    <img id="avatar" src="spoonerboy-avatar.png" alt="spoonerboy avatar"/>
+    <img src="spoonerboy-avatar.png" alt="spoonerboy" id="avatar">
   </header>
 
   <main>
-    <h1>@spoonerboy</h1>
-
-    <nav id="socials">
-      <a href="https://discord.com/users/spoonerboy1tap" target="_blank" rel="noopener">Discord</a>
-      <a href="https://tiktok.com/@spoonerboy1tap" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://youtube.com/@spoonerboy" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://instagram.com/spoonerboy1tap" target="_blank" rel="noopener">Instagram</a>
-    </nav>
-
-    <p><a href="/feedback.html">Leave feedback</a></p>
+    <a class="btn" href="https://discord.gg/spoonerboy">Discord</a>
+    <a class="btn" href="https://tiktok.com/@spoonerboy1tap">TikTok</a>
+    <a class="btn" href="https://youtube.com/@spoonerboy">YouTube</a>
+    <a class="btn" href="https://instagram.com/spoonerboy1tap">Instagram</a>
   </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
