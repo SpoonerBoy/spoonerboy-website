@@ -1,0 +1,12 @@
+{
+  "name": "spoonerboy",
+  "short_name": "spoonerboy",
+  "description": "One-tap social hub for spoonerboy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#000000",
+  "icons": [
+    { "src": "spoonerboy-avatar.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
