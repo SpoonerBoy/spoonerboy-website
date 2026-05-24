@@ -1,0 +1,36 @@
+{{!< default}}
+
+{{!-- HERO — live MC player count is JS-driven; keep in template --}}
+<section class="sb-hero" style="min-height:65vh;background:#0a1a0a">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-inner">
+    <div class="sb-eyebrow" style="background:rgba(48,209,88,0.08);border-color:rgba(48,209,88,0.25);color:var(--green)">
+      <div class="sb-live-dot"></div>Fabric 1.21.10 &middot; Whitelisted SMP
+    </div>
+    <h1 class="sb-hero-title">{{#if title}}{{title}}{{else}}Spooner<br><span class="dim">Craft.</span>{{/if}}</h1>
+    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}A community-focused whitelisted survival server. Good vibes, active players, and proximity voice chat.{{/if}}</p>
+    <div class="sb-btn-row">
+      <a class="sb-btn sb-btn-blue" href="https://forms.gle/Xbn5PfNaYGfu74DC6" target="_blank" rel="noopener">Apply to join</a>
+      <div class="sb-ip-box">
+        <code>playmc.spoonerboy.com</code>
+        <button class="sb-copy-btn" data-copy="playmc.spoonerboy.com">Copy</button>
+      </div>
+    </div>
+    <div class="sb-stat-row">
+      <div class="sb-stat"><div class="sb-stat-val g" data-mc-count="online">—</div><div class="sb-stat-lbl">Players online</div></div>
+      <div class="sb-stat"><div class="sb-stat-val" data-mc-count="max">—</div><div class="sb-stat-lbl">Max players</div></div>
+      <div class="sb-stat"><div class="sb-stat-val" data-mc-count="status">—</div><div class="sb-stat-lbl">Server status</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- BODY — mod list, rules, apply section managed in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap" style="max-width:1200px;padding-top:0">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}

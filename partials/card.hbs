@@ -1,0 +1,17 @@
+{{!-- Reusable post card — uses SpoonerBoy sb-post-card styles --}}
+<a class="sb-post-card" href="{{url}}">
+  {{#if feature_image}}
+    <img class="sb-post-img" src="{{feature_image}}" alt="{{title}}" loading="{{#if @first}}eager{{else}}lazy{{/if}}">
+  {{else}}
+    <div class="sb-post-img-placeholder">📝</div>
+  {{/if}}
+  <div class="sb-post-body">
+    {{#primary_tag}}<div class="sb-post-tag">{{name}}</div>{{/primary_tag}}
+    <div class="sb-post-title">{{title}}</div>
+    {{#if custom_excerpt}}<div class="sb-post-excerpt">{{custom_excerpt}}</div>{{/if}}
+    <div class="sb-post-meta">
+      <span>{{date format="MMM D, YYYY"}}</span>
+      <span>{{reading_time}}</span>
+    </div>
+  </div>
+</a>

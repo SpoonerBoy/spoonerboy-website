@@ -1,0 +1,46 @@
+{{!< default}}
+
+{{!-- POST HERO --}}
+<section class="sb-page-hero {{#if feature_image}}sb-page-hero--image{{/if}}">
+  <div class="sb-hero-grid"></div>
+  {{#if feature_image}}
+    <div class="sb-page-hero-bg" style="background-image:url('{{feature_image}}')"></div>
+    <div class="sb-page-hero-overlay"></div>
+  {{else}}
+    <div class="sb-hero-glow"></div>
+  {{/if}}
+  <div class="sb-page-hero-inner">
+    {{#if tags}}
+      <div class="sb-page-eyebrow">
+        {{#foreach tags}}<span class="sb-page-tag">{{name}}</span>{{/foreach}}
+      </div>
+    {{/if}}
+    <h1 class="sb-page-title">{{title}}</h1>
+    {{#if custom_excerpt}}<p class="sb-page-excerpt">{{custom_excerpt}}</p>{{/if}}
+    <div class="sb-page-meta">
+      <span>{{date format="MMMM D, YYYY"}}</span>
+      <span>{{reading_time}}</span>
+      {{#primary_author}}<span>By {{name}}</span>{{/primary_author}}
+    </div>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- POST CONTENT --}}
+<div class="sb-page-content-wrap">
+  <div class="sb-page-content gh-content">
+    {{{content}}}
+  </div>
+</div>
+
+{{!-- PREV / NEXT POSTS --}}
+<hr class="sb-divider">
+<div class="sb-page-nav-wrap">
+  {{#prev_post}}
+    <a class="sb-btn sb-btn-ghost" href="{{url}}">&larr; {{title}}</a>
+  {{/prev_post}}
+  {{#next_post}}
+    <a class="sb-btn sb-btn-ghost" href="{{url}}" style="margin-left:auto">{{title}} &rarr;</a>
+  {{/next_post}}
+</div>

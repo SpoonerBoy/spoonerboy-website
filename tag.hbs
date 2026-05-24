@@ -1,0 +1,53 @@
+{{!< default}}
+
+{{#tag}}
+<section class="sb-page-hero {{#if feature_image}}sb-page-hero--image{{/if}}">
+  <div class="sb-hero-grid"></div>
+  {{#if feature_image}}
+    <div class="sb-page-hero-bg" style="background-image:url('{{feature_image}}')"></div>
+    <div class="sb-page-hero-overlay"></div>
+  {{else}}
+    <div class="sb-hero-glow"></div>
+  {{/if}}
+  <div class="sb-page-hero-inner">
+    <div class="sb-page-eyebrow">
+      <span class="sb-page-tag">Tag</span>
+    </div>
+    <h1 class="sb-page-title">{{name}}</h1>
+    <p class="sb-page-excerpt">
+      {{#if description}}
+        {{description}}
+      {{else}}
+        {{plural ../pagination.total empty='No posts yet' singular='% post' plural='% posts'}}
+      {{/if}}
+    </p>
+  </div>
+</section>
+{{/tag}}
+
+<hr class="sb-divider">
+
+<div class="sb-section">
+  <div class="sb-post-grid">
+    {{#foreach posts}}
+    <a class="sb-post-card" href="{{url}}">
+      {{#if feature_image}}
+        <img class="sb-post-img" src="{{feature_image}}" alt="{{title}}" loading="lazy">
+      {{else}}
+        <div class="sb-post-img-placeholder">📝</div>
+      {{/if}}
+      <div class="sb-post-body">
+        {{#primary_tag}}<div class="sb-post-tag">{{name}}</div>{{/primary_tag}}
+        <div class="sb-post-title">{{title}}</div>
+        {{#if custom_excerpt}}<div class="sb-post-excerpt">{{custom_excerpt}}</div>{{/if}}
+        <div class="sb-post-meta">
+          <span>{{date format="MMM D, YYYY"}}</span>
+          <span>{{reading_time}}</span>
+        </div>
+      </div>
+    </a>
+    {{/foreach}}
+  </div>
+
+  {{pagination}}
+</div>

@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{!-- JS countdown + redirect — kept in template; text uses Ghost page meta --}}
+<section class="sb-hero">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow"></div>
+  <div class="sb-hero-inner">
+    <div class="sb-eyebrow"><div class="sb-live-dot"></div>Redirecting to GitHub...</div>
+    <h1 class="sb-hero-title" style="font-size:clamp(36px,6vw,72px)">
+      {{#if title}}{{title}}{{else}}github.com/<br><span class="dim">SpoonerBoy</span>{{/if}}
+    </h1>
+    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Taking you to my GitHub profile. If you're not redirected automatically, click below.{{/if}}</p>
+    <div class="sb-btn-row">
+      <a class="sb-btn sb-btn-blue" href="https://github.com/SpoonerBoy" target="_blank" rel="noopener">Go to GitHub &rarr;</a>
+      <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/projects/">View Projects page</a>
+    </div>
+    <div style="margin-top:24px;font-family:'DM Mono',monospace;font-size:12px;color:var(--muted)" id="gh-countdown">
+      Redirecting in 3 seconds...
+    </div>
+  </div>
+</section>

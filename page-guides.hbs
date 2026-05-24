@@ -1,0 +1,42 @@
+{{!< default}}
+
+{{!-- HERO — static theme chrome --}}
+<section class="sb-page-hero">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow"></div>
+  <div class="sb-page-hero-inner">
+    <div class="sb-eyebrow" style="background:rgba(100,200,255,0.08);border-color:rgba(100,200,255,0.25);color:#64C8FF">
+      <div class="sb-live-dot"></div>Documentation &middot; Guides &middot; How-tos
+    </div>
+    <h1 class="sb-page-title">{{#if title}}{{title}}{{else}}Guides &amp; Documentation{{/if}}</h1>
+    <p class="sb-page-excerpt">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Deep dives into self-hosting, networking, and homelab infrastructure.{{/if}}</p>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- BODY — managed in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap" style="max-width:1200px;padding-top:0">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}
+
+<hr class="sb-divider">
+
+{{!-- DOCS CALLOUT --}}
+<div class="sb-docs-callout">
+  <div class="sb-docs-callout-inner">
+    <div class="sb-docs-callout-text">
+      <div class="sb-docs-callout-label">Full Reference</div>
+      <div class="sb-docs-callout-title">Looking for deeper documentation?</div>
+      <div class="sb-docs-callout-desc">The full homelab reference — network diagrams, configs, and runbooks — lives at homelabdocumented.com.</div>
+    </div>
+    <div class="sb-docs-callout-actions">
+      <a class="sb-btn sb-btn-blue" href="/homelab/">All projects</a>
+      <a class="sb-btn sb-btn-ghost" href="https://homelabdocumented.com" target="_blank" rel="noopener">homelabdocumented.com ↗</a>
+    </div>
+  </div>
+</div>

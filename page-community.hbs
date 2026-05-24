@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{!-- HERO — static theme chrome --}}
+<section class="sb-hero" style="min-height:50vh">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow"></div>
+  <div class="sb-hero-inner">
+    <div class="sb-eyebrow"><div class="sb-live-dot"></div>Live from Reddit &middot; Updated on every visit</div>
+    <h1 class="sb-hero-title">{{#if title}}{{title}}{{else}}Community<br><span class="dim">Feeds.</span>{{/if}}</h1>
+    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Live posts from the homelab and networking communities — r/homelab, r/Ubiquiti, r/unifi, r/HomeNetworking, and r/pchelp.{{/if}}</p>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- OPTIONAL INTRO — managed in Ghost Admin (leave blank to hide) --}}
+{{#page}}
+<div class="sb-page-content-wrap">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}
+
+{{!-- LIVE REDDIT FEED — JS-driven; keep in template --}}
+<div class="sb-section">
+  <div id="community-feed"></div>
+</div>

@@ -1,0 +1,46 @@
+{{!< default}}
+
+{{!-- HERO --}}
+<section class="sb-page-hero">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow"></div>
+  <div class="sb-page-hero-inner">
+    <div class="sb-page-eyebrow">
+      {{#if tags}}
+        {{#foreach tags}}<span class="sb-page-tag">{{name}}</span>{{/foreach}}
+      {{else}}
+        <span class="sb-page-tag">Guide</span>
+        <span class="sb-page-tag">DNS</span>
+        <span class="sb-page-tag">Docker</span>
+      {{/if}}
+    </div>
+    <h1 class="sb-page-title">{{#if title}}{{title}}{{else}}Pi-hole in Docker{{/if}}</h1>
+    <p class="sb-page-excerpt">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Network-wide DNS filtering and ad blocking. Set up Pi-hole in a Docker container to protect every device on your network.{{/if}}</p>
+    <div class="sb-page-meta">
+      <span>{{date format="MMMM D, YYYY"}}</span>
+      <span>{{reading_time}}</span>
+    </div>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- CONTENT — managed in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}
+
+{{!-- PREV / NEXT --}}
+<hr class="sb-divider">
+<div class="sb-page-nav-wrap">
+  {{#prev_post}}
+    <a class="sb-btn sb-btn-ghost" href="{{url}}">&larr; {{title}}</a>
+  {{/prev_post}}
+  {{#next_post}}
+    <a class="sb-btn sb-btn-ghost" href="{{url}}" style="margin-left:auto">{{title}} &rarr;</a>
+  {{/next_post}}
+</div>

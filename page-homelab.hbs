@@ -1,0 +1,165 @@
+{{!< default}}
+
+{{!-- HERO --}}
+<section class="sb-hero" style="min-height:65vh">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow"></div>
+  <div class="sb-hero-inner">
+    <div class="sb-eyebrow">
+      <div class="sb-live-dot"></div>homelabdocumented.com &middot; Self-hosted &middot; Always building
+    </div>
+    <h1 class="sb-hero-title">{{#if title}}{{title}}{{else}}Homelab<br><span class="dim">Documented.</span>{{/if}}</h1>
+    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}A living record of everything in the lab. Full documentation, configs, and runbooks at homelabdocumented.com.{{/if}}</p>
+    <div class="sb-btn-row">
+      <a class="sb-btn sb-btn-blue" href="https://homelabdocumented.com" target="_blank" rel="noopener">Visit homelabdocumented.com ↗</a>
+      <a class="sb-btn sb-btn-ghost" href="/guides/">Guides</a>
+    </div>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- GHOST ADMIN INTRO — add a short overview in the page body in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}
+
+<hr class="sb-divider">
+
+{{!-- ACTIVE PROJECTS --}}
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">Infrastructure</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Active Projects.</h2></span></div>
+  <p class="sb-hl-section-sub sb-reveal sb-reveal-d2">Everything running in the lab right now — click any card for the full guide.</p>
+
+  <div class="sb-hl-projects sb-reveal sb-reveal-d3">
+
+    <a class="sb-hl-project" href="/pihole-docker/">
+      <div class="sb-hl-project-icon">🛡️</div>
+      <div class="sb-hl-project-info">
+        <div class="sb-hl-project-name">Pi-hole in Docker</div>
+        <div class="sb-hl-project-desc">Network-wide DNS filtering and ad blocking. Blocks ads and trackers at the DNS level for every device on the network.</div>
+        <div class="sb-hl-project-tags">
+          <span class="sb-page-tag">DNS</span>
+          <span class="sb-page-tag">Docker</span>
+          <span class="sb-page-tag">Network</span>
+        </div>
+      </div>
+      <div class="sb-hl-project-status sb-hl-status-live">● Running</div>
+    </a>
+
+    <a class="sb-hl-project" href="/ubuntu-server/">
+      <div class="sb-hl-project-icon">🐧</div>
+      <div class="sb-hl-project-info">
+        <div class="sb-hl-project-name">Ubuntu Server</div>
+        <div class="sb-hl-project-desc">Base server setup with hardening, Docker engine, and core utility services. The foundation everything else runs on.</div>
+        <div class="sb-hl-project-tags">
+          <span class="sb-page-tag">Linux</span>
+          <span class="sb-page-tag">Ubuntu</span>
+          <span class="sb-page-tag">Server</span>
+        </div>
+      </div>
+      <div class="sb-hl-project-status sb-hl-status-live">● Running</div>
+    </a>
+
+    <a class="sb-hl-project" href="/proxmox/">
+      <div class="sb-hl-project-icon">🖥️</div>
+      <div class="sb-hl-project-info">
+        <div class="sb-hl-project-name">Proxmox VE</div>
+        <div class="sb-hl-project-desc">Bare-metal hypervisor running VMs and LXC containers. Manages the entire lab compute layer.</div>
+        <div class="sb-hl-project-tags">
+          <span class="sb-page-tag">Virtualization</span>
+          <span class="sb-page-tag">Proxmox</span>
+          <span class="sb-page-tag">Homelab</span>
+        </div>
+      </div>
+      <div class="sb-hl-project-status sb-hl-status-live">● Running</div>
+    </a>
+
+    <a class="sb-hl-project" href="/spoonercraft/">
+      <div class="sb-hl-project-icon">⛏️</div>
+      <div class="sb-hl-project-info">
+        <div class="sb-hl-project-name">SpoonerCraft SMP</div>
+        <div class="sb-hl-project-desc">Fabric 1.21.x whitelisted survival server with proximity voice chat. Self-hosted on the homelab.</div>
+        <div class="sb-hl-project-tags">
+          <span class="sb-page-tag">Minecraft</span>
+          <span class="sb-page-tag">Fabric</span>
+          <span class="sb-page-tag">Server</span>
+        </div>
+      </div>
+      <div class="sb-hl-project-status sb-hl-status-live">● Running</div>
+    </a>
+
+    <a class="sb-hl-project" href="/github/">
+      <div class="sb-hl-project-icon">⚡</div>
+      <div class="sb-hl-project-info">
+        <div class="sb-hl-project-name">GitHub Projects</div>
+        <div class="sb-hl-project-desc">Open-source configs, Docker Compose files, and scripts for homelab setups. All public on GitHub.</div>
+        <div class="sb-hl-project-tags">
+          <span class="sb-page-tag">Open Source</span>
+          <span class="sb-page-tag">GitHub</span>
+        </div>
+      </div>
+      <div class="sb-hl-project-status sb-hl-status-external">↗ GitHub</div>
+    </a>
+
+    <a class="sb-hl-project" href="https://homelabdocumented.com" target="_blank" rel="noopener">
+      <div class="sb-hl-project-icon">📚</div>
+      <div class="sb-hl-project-info">
+        <div class="sb-hl-project-name">Homelab Documented</div>
+        <div class="sb-hl-project-desc">Full documentation site with runbooks, network diagrams, configs, and step-by-step setup guides for the entire lab.</div>
+        <div class="sb-hl-project-tags">
+          <span class="sb-page-tag">Docs</span>
+          <span class="sb-page-tag">Reference</span>
+        </div>
+      </div>
+      <div class="sb-hl-project-status sb-hl-status-external">↗ Visit</div>
+    </a>
+
+  </div>
+</div>
+
+<hr class="sb-divider">
+
+{{!-- CURRENTLY WORKING ON
+     Posts tagged "lab-update" in Ghost Admin auto-appear here.
+     Create a post, set any tag to "lab-update", and it shows in this feed. --}}
+{{#get "posts" filter="tag:lab-update" limit="6" include="tags"}}
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">In Progress</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Currently Working On.</h2></span></div>
+
+  {{#if posts}}
+  <p class="sb-hl-section-sub sb-reveal sb-reveal-d2">Latest lab updates — tag any post <code class="sb-hl-tag-hint">lab-update</code> in Ghost Admin to add it here.</p>
+  <div class="sb-post-grid sb-reveal sb-reveal-d3">
+    {{#foreach posts}}
+    <a class="sb-post-card" href="{{url}}">
+      {{#if feature_image}}
+      <div class="sb-post-img" style="background-image:url('{{img_url feature_image size="m"}}')"></div>
+      {{/if}}
+      <div class="sb-post-card-body">
+        {{#if primary_tag}}<div class="sb-post-tag">{{primary_tag.name}}</div>{{/if}}
+        <h3 class="sb-post-title">{{title}}</h3>
+        <p class="sb-post-desc">{{excerpt words="25"}}</p>
+        <div class="sb-post-meta">
+          <span>{{date format="MMM D, YYYY"}}</span>
+          {{#if reading_time}}<span>{{reading_time}}</span>{{/if}}
+        </div>
+      </div>
+    </a>
+    {{/foreach}}
+  </div>
+  {{else}}
+  <div class="sb-hl-empty-state">
+    <div class="sb-hl-empty-icon">🔧</div>
+    <p class="sb-hl-empty-title">No lab updates yet</p>
+    <p class="sb-hl-empty-desc">Tag any Ghost post with <code class="sb-hl-tag-hint">lab-update</code> and it will appear here as a blog-style update.</p>
+  </div>
+  {{/if}}
+
+</div>
+{{/get}}

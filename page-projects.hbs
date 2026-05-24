@@ -1,0 +1,36 @@
+{{!< default}}
+
+{{!-- HERO — static theme chrome --}}
+<section class="sb-hero" style="min-height:55vh">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow"></div>
+  <div class="sb-hero-inner">
+    <div class="sb-eyebrow"><div class="sb-live-dot"></div>github.com/SpoonerBoy</div>
+    <h1 class="sb-hero-title">{{#if title}}{{title}}{{else}}Projects &amp;<br><span class="dim">Repos.</span>{{/if}}</h1>
+    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Everything I've built, documented, and open-sourced. Configs, guides, and homelab tooling.{{/if}}</p>
+    <div class="sb-btn-row">
+      <a class="sb-btn sb-btn-blue" href="https://github.com/SpoonerBoy" target="_blank" rel="noopener">View GitHub profile</a>
+    </div>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- FEATURED PROJECTS — managed in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap" style="max-width:1200px;padding-top:0">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}
+
+{{!-- LIVE GITHUB REPOS — JS-driven; keep in template --}}
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">All repositories</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Live from GitHub.</h2></span></div>
+  <p class="sb-section-sub sb-reveal sb-reveal-d2">Pulled directly from the GitHub API — always up to date.</p>
+  <div class="sb-repo-grid sb-reveal sb-reveal-d3" id="gh-repos">
+    <div style="padding:40px;text-align:center;color:var(--muted);font-family:'DM Mono',monospace;font-size:13px">Loading repos...</div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{{!< default}}
+
+{{!-- HERO — static theme chrome (rarely changes) --}}
+<section class="sb-hero sb-hero--short" style="min-height:60vh">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow"></div>
+  <div class="sb-hero-inner">
+    <div class="sb-eyebrow"><div class="sb-live-dot"></div>Celina, Ohio &middot; SpoonerBoy</div>
+    <h1 class="sb-hero-title">Hey, I'm<br><span class="dim">Spoonerboy.</span></h1>
+    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Homelab tinkerer, self-hosting enthusiast, and Minecraft server admin running everything from a Raspberry Pi in my house.{{/if}}</p>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- BODY — managed in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap" style="max-width:1200px;padding-top:0">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}

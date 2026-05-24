@@ -1,0 +1,41 @@
+{{!< ../default}}
+
+<div class="sb-auth-wrap">
+  <div class="sb-wrap">
+
+    {{#if @member}}
+
+      {{!-- Already logged in: redirect home --}}
+      <script>window.location = '{{@site.url}}';</script>
+
+    {{else}}
+
+      {{!-- Not logged in: signin form --}}
+      <form class="sb-auth-form" data-members-form="signin">
+        <h1 class="sb-auth-title">Welcome back</h1>
+        <p class="sb-auth-desc">Sign in to your account for full access</p>
+        <div class="sb-auth-box">
+          <input
+            aria-label="Email Address"
+            class="sb-input"
+            data-members-email
+            type="email"
+            placeholder="Your email address"
+            required
+            autocomplete="off"
+            autofocus
+          />
+          <button class="sb-btn sb-btn-blue sb-auth-submit" type="submit">
+            <span class="gh-button-content">Sign in</span>
+            <span class="gh-button-loader">{{> "icons/loader"}}</span>
+          </button>
+        </div>
+        <p class="sb-auth-hint"><small>Don't have an account yet? <a href="/signup/">Sign up</a></small></p>
+        <div class="message-success">Check your inbox and click the link to complete sign in</div>
+        <div class="message-error">Please enter a valid email address!</div>
+      </form>
+
+    {{/if}}
+
+  </div>
+</div>

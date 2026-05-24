@@ -1,0 +1,40 @@
+{{!< ../default}}
+
+<div class="sb-auth-wrap">
+  <div class="sb-wrap">
+
+    {{#if @member.paid}}
+
+      {{!-- Paid member: show account info --}}
+      <div class="sb-account-box">
+        <div class="sb-badge green" style="margin-bottom:20px">Active subscriber</div>
+        <h2 class="sb-account-box-title">You're all set!</h2>
+        <p style="font-size:15px;color:var(--muted);margin-bottom:24px">
+          <strong style="color:var(--text)">{{@member.email}}</strong> has full access to {{@site.title}}.
+          If you need any help, feel free to get in touch.
+        </p>
+        <a class="sb-btn sb-btn-ghost" href="{{@site.url}}">Back to site &rarr;</a>
+      </div>
+
+    {{else if @member}}
+
+      {{!-- Free member: link to subscribe --}}
+      <div class="sb-account-box">
+        <div class="sb-badge" style="margin-bottom:20px">Free member</div>
+        <h2 class="sb-account-box-title">Upgrade for full access</h2>
+        <p style="font-size:15px;color:var(--muted);margin-bottom:24px">
+          <strong style="color:var(--text)">{{@member.email}}</strong> is subscribed to free updates from {{@site.title}},
+          but doesn't have a paid subscription yet.
+        </p>
+        <a class="sb-btn sb-btn-blue" href="/signup/">Subscribe now</a>
+      </div>
+
+    {{else}}
+
+      {{!-- Not logged in: redirect to signin --}}
+      <script>window.location = '{{@site.url}}/signin/';</script>
+
+    {{/if}}
+
+  </div>
+</div>

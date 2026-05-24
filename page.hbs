@@ -1,0 +1,64 @@
+{{!< default}}
+
+{{#if @page.show_title_and_feature_image}}
+<section class="sb-page-hero {{#if feature_image}}sb-page-hero--image{{/if}}">
+  <div class="sb-hero-grid"></div>
+  {{#if feature_image}}
+    <div class="sb-page-hero-bg" style="background-image:url('{{feature_image}}')"></div>
+    <div class="sb-page-hero-overlay"></div>
+  {{else}}
+    <div class="sb-hero-glow"></div>
+  {{/if}}
+
+  <div class="sb-page-hero-inner">
+    {{#if tags}}
+      <div class="sb-page-eyebrow">
+        {{#foreach tags}}
+          <span class="sb-page-tag">{{name}}</span>
+        {{/foreach}}
+      </div>
+    {{else}}
+      <div class="sb-eyebrow" style="margin-bottom:24px">
+        <div class="sb-live-dot"></div>
+        {{@site.title}}
+      </div>
+    {{/if}}
+
+    <h1 class="sb-page-title">{{title}}</h1>
+    {{#if custom_excerpt}}
+      <p class="sb-page-excerpt">{{custom_excerpt}}</p>
+    {{/if}}
+
+    {{#if published_at}}
+    <div class="sb-page-meta">
+      <span>{{date format="MMMM D, YYYY"}}</span>
+      {{#if reading_time}}<span>{{reading_time}}</span>{{/if}}
+    </div>
+    {{/if}}
+  </div>
+</section>
+
+<hr class="sb-divider">
+{{/if}}
+
+{{#page}}
+<div class="sb-page-content-wrap">
+  <div class="sb-page-content gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}
+
+{{#if prev_page}}
+  {{#if next_page}}
+    <hr class="sb-divider">
+    <div class="sb-page-nav-wrap">
+      {{#prev_page}}
+        <a class="sb-btn sb-btn-ghost" href="{{url}}">&larr; {{title}}</a>
+      {{/prev_page}}
+      {{#next_page}}
+        <a class="sb-btn sb-btn-ghost" href="{{url}}" style="margin-left:auto">{{title}} &rarr;</a>
+      {{/next_page}}
+    </div>
+  {{/if}}
+{{/if}}

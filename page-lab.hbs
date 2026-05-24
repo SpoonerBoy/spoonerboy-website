@@ -1,0 +1,53 @@
+{{!< default}}
+
+{{!-- HERO — static theme chrome --}}
+<section class="sb-hero" style="min-height:65vh">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow"></div>
+  <div class="sb-hero-inner">
+    <div class="sb-eyebrow"><div class="sb-live-dot"></div>Celina, Ohio &middot; Always on</div>
+    <h1 class="sb-hero-title">The Grays.<br><span class="dim">My Homelab.</span></h1>
+    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}A self-hosted lab running on Raspberry Pis, UniFi networking, and Docker — zero cloud bills, zero open ports.{{/if}}</p>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- STAT ROW — update these values here in the theme --}}
+<div style="padding:60px 48px 0;max-width:1200px;margin:0 auto">
+  <div class="sb-stat-row sb-reveal" style="max-width:100%">
+    <div class="sb-stat"><div class="sb-stat-val g">2</div><div class="sb-stat-lbl">Raspberry Pis</div></div>
+    <div class="sb-stat"><div class="sb-stat-val b">0</div><div class="sb-stat-lbl">Open ports</div></div>
+    <div class="sb-stat"><div class="sb-stat-val t">12+</div><div class="sb-stat-lbl">Hosted services</div></div>
+    <div class="sb-stat"><div class="sb-stat-val o">24/7</div><div class="sb-stat-lbl">Always online</div></div>
+    <div class="sb-stat"><div class="sb-stat-val">$0</div><div class="sb-stat-lbl">Cloud bills</div></div>
+  </div>
+</div>
+
+<hr class="sb-divider" style="margin-top:60px">
+
+{{!-- BODY — managed in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap" style="max-width:1200px;padding-top:0">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}
+
+<hr class="sb-divider">
+
+{{!-- DOCS CALLOUT --}}
+<div class="sb-docs-callout">
+  <div class="sb-docs-callout-inner">
+    <div class="sb-docs-callout-text">
+      <div class="sb-docs-callout-label">Full Documentation</div>
+      <div class="sb-docs-callout-title">Everything in the lab is documented.</div>
+      <div class="sb-docs-callout-desc">Configs, runbooks, network diagrams, and step-by-step guides for every service running here.</div>
+    </div>
+    <div class="sb-docs-callout-actions">
+      <a class="sb-btn sb-btn-blue" href="/homelab/">View all projects</a>
+      <a class="sb-btn sb-btn-ghost" href="https://homelabdocumented.com" target="_blank" rel="noopener">homelabdocumented.com ↗</a>
+    </div>
+  </div>
+</div>
