@@ -69,6 +69,8 @@
     "page-ubuntu-server": "Guide: Ubuntu Server",
     "page-proxmox": "Guide: Proxmox",
     "page-spoonercraft": "SpoonerCraft",
+    "page-mc-mods": "SpoonerPack Mods",
+    "page-homelab": "Homelab",
     "page-community": "Community",
     "page-github": "GitHub Redirect"
   },

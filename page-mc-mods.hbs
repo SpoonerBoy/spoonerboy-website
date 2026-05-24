@@ -1,0 +1,74 @@
+{{!< default}}
+
+{{!-- HERO --}}
+<section class="sb-page-hero" style="background:#0a1a0a">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow" style="background:radial-gradient(ellipse at 50% 0%, rgba(48,209,88,0.12) 0%, transparent 70%)"></div>
+  <div class="sb-page-hero-inner">
+    <div class="sb-eyebrow" style="background:rgba(48,209,88,0.08);border-color:rgba(48,209,88,0.25);color:var(--green)">
+      <div class="sb-live-dot"></div>SpoonerCraft &middot; Fabric 26.1.2
+    </div>
+    <h1 class="sb-page-title">{{#if title}}{{title}}{{else}}Spoonerpack Mods and Resource Packs{{/if}}</h1>
+    <p class="sb-page-excerpt">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Download the SpoonerPack modpack and resource packs, then connect to playmc.spoonerboy.com.{{/if}}</p>
+    <div class="sb-btn-row" style="margin-top:28px">
+      <div class="sb-ip-box">
+        <code>playmc.spoonerboy.com</code>
+        <button class="sb-copy-btn" data-copy="playmc.spoonerboy.com">Copy</button>
+      </div>
+      <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/spoonercraft/">← Back to SpoonerCraft</a>
+    </div>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- DOWNLOADS — served from theme assets --}}
+<div class="sb-page-content-wrap" style="max-width:800px;padding-top:0;padding-bottom:0">
+  <div class="sb-mc-downloads">
+    <a class="sb-mc-download" href="{{asset "spoonerpack/spoonerpack-mods.zip"}}" download>
+      <div class="sb-mc-download-icon">📦</div>
+      <div class="sb-mc-download-body">
+        <div class="sb-mc-download-title">SpoonerPack Mods</div>
+        <div class="sb-mc-download-desc">Armored Elytra, Entity Model/Texture Features, Fabric API, Iris, JourneyMap, Not Enough Animations, Simple Voice Chat</div>
+        <div class="sb-mc-download-meta">spoonerpack-mods.zip · 8 mods · Fabric 26.1.2</div>
+      </div>
+      <div class="sb-mc-download-btn">Download</div>
+    </a>
+    <a class="sb-mc-download" href="{{asset "spoonerpack/ComplementaryReimagined_r5.8.1.zip"}}" download>
+      <div class="sb-mc-download-icon">🎨</div>
+      <div class="sb-mc-download-body">
+        <div class="sb-mc-download-title">Complementary Reimagined</div>
+        <div class="sb-mc-download-desc">Shader-compatible resource pack — place in your resourcepacks folder</div>
+        <div class="sb-mc-download-meta">ComplementaryReimagined_r5.8.1.zip</div>
+      </div>
+      <div class="sb-mc-download-btn">Download</div>
+    </a>
+    <a class="sb-mc-download" href="{{asset "spoonerpack/FreshAnimations_v1.10.5.zip"}}" download>
+      <div class="sb-mc-download-icon">🎨</div>
+      <div class="sb-mc-download-body">
+        <div class="sb-mc-download-title">Fresh Animations</div>
+        <div class="sb-mc-download-desc">Animated mobs and items — place in your resourcepacks folder</div>
+        <div class="sb-mc-download-meta">FreshAnimations_v1.10.5.zip</div>
+      </div>
+      <div class="sb-mc-download-btn">Download</div>
+    </a>
+    <a class="sb-mc-download" href="{{asset "spoonerpack/Round-Trees-8.2.zip"}}" download>
+      <div class="sb-mc-download-icon">🎨</div>
+      <div class="sb-mc-download-body">
+        <div class="sb-mc-download-title">Round Trees</div>
+        <div class="sb-mc-download-desc">Round tree trunks and foliage — place in your resourcepacks folder</div>
+        <div class="sb-mc-download-meta">Round-Trees-8.2.zip</div>
+      </div>
+      <div class="sb-mc-download-btn">Download</div>
+    </a>
+  </div>
+</div>
+
+{{!-- BODY — install guide managed in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap" style="max-width:800px;padding-top:0">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}

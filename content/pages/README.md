@@ -33,6 +33,7 @@ All editable body content lives in these `.md` files and in **Ghost Admin**.
 | `lab.md` | `/lab/` | page-lab | 4 HTML card sections; stat numbers in template |
 | `guides.md` | `/guides/` | page-guides | 2 HTML card sections; add cards for new guides |
 | `spoonercraft.md` | `/spoonercraft/` | page-spoonercraft | 3 HTML card sections; hero + MC stats in template |
+| `mc-mods.md` | `/mc-mods/` | page-mc-mods | Downloads in template (`assets/spoonerpack/`); install guide in Ghost Admin |
 | `projects.md` | `/projects/` | page-projects | 1 HTML card; live GitHub grid in template |
 | `community.md` | `/community/` | page-community | Leave body blank; live Reddit feed in template |
 | `github.md` | `/github/` | page-github | Redirect page; leave body blank |

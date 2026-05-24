@@ -81,3 +81,20 @@ custom_excerpt: A community-focused whitelisted survival server. Good vibes, act
     </div>
   </div>
 </div>
+
+
+<!-- ═══════════════════════════════════════════════
+     SECTION: MODPACK DOWNLOAD  (HTML card)
+     ═══════════════════════════════════════════════ -->
+<div class="sb-docs-callout" style="padding:0;margin-top:40px">
+  <div class="sb-docs-callout-inner">
+    <div class="sb-docs-callout-text">
+      <div class="sb-docs-callout-label">Client Mods</div>
+      <div class="sb-docs-callout-title">Need the modpack?</div>
+      <div class="sb-docs-callout-desc">Download the current Fabric modpack, resource pack, and step-by-step install guide.</div>
+    </div>
+    <div class="sb-docs-callout-actions">
+      <a class="sb-btn sb-btn-blue" href="/mc-mods/">Get mods &amp; downloads</a>
+    </div>
+  </div>
+</div>

@@ -1370,3 +1370,95 @@ form[data-members-form].error .message-error { display: block; }
     padding: 28px 24px;
   }
 }
+
+/* =============================================================
+   MC MODS PAGE — Download cards
+   ============================================================= */
+
+.sb-mc-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 40px;
+}
+
+.sb-mc-download {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 24px;
+  background: var(--s1);
+  border: 0.5px solid var(--b1);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.sb-mc-download:hover {
+  background: var(--card-hover);
+  border-color: rgba(48, 209, 88, 0.3);
+  text-decoration: none;
+}
+
+.sb-mc-download-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(48, 209, 88, 0.08);
+  border-radius: 10px;
+}
+
+.sb-mc-download-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.sb-mc-download-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.sb-mc-download-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sb-mc-download-meta {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  color: var(--dim);
+  margin-top: 6px;
+}
+
+.sb-mc-download-btn {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border-radius: 980px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(48, 209, 88, 0.12);
+  color: var(--green);
+  border: 0.5px solid rgba(48, 209, 88, 0.25);
+  transition: background 0.2s;
+}
+
+.sb-mc-download:hover .sb-mc-download-btn {
+  background: rgba(48, 209, 88, 0.2);
+}
+
+@media (max-width: 640px) {
+  .sb-mc-download {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .sb-mc-download-btn {
+    margin-left: 66px;
+  }
+}
