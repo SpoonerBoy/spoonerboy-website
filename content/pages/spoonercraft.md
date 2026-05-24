@@ -20,25 +20,23 @@ custom_excerpt: A community-focused whitelisted survival server. Good vibes, act
      SECTION: MOD LIST  (HTML card)
      ═══════════════════════════════════════════════ -->
 <div class="sb-section">
-  <div class="sb-section-label sb-reveal">Fabric 1.21.10</div>
+  <div class="sb-section-label sb-reveal">Fabric 26.1.2</div>
   <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Mod list.</h2></span></div>
   <p class="sb-section-sub sb-reveal sb-reveal-d2">Client-side mods are optional — the server runs everything listed below.</p>
   <div class="sb-mc-panel sb-reveal sb-reveal-d3">
     <div class="sb-mod-grid">
       <div class="sb-mod"><div class="sb-mod-name">Armored Elytra</div><div class="sb-mod-desc">Combine elytra with armor</div></div>
-      <div class="sb-mod"><div class="sb-mod-name">Audio Player</div><div class="sb-mod-desc">Custom audio in-game</div></div>
       <div class="sb-mod"><div class="sb-mod-name">Beehave</div><div class="sb-mod-desc">Improved bee behavior</div></div>
       <div class="sb-mod"><div class="sb-mod-name">Chunky</div><div class="sb-mod-desc">Pre-generate world chunks</div></div>
-      <div class="sb-mod"><div class="sb-mod-name">Fabric Carpet</div><div class="sb-mod-desc">Server utilities &amp; tweaks</div></div>
-      <div class="sb-mod"><div class="sb-mod-name">JourneyMap</div><div class="sb-mod-desc">Live minimap &amp; world map</div></div>
+      <div class="sb-mod"><div class="sb-mod-name">Collective</div><div class="sb-mod-desc">Shared library for Serilum mods</div></div>
+      <div class="sb-mod"><div class="sb-mod-name">CraterLib</div><div class="sb-mod-desc">Library for Discord integration</div></div>
+      <div class="sb-mod"><div class="sb-mod-name">Double Doors</div><div class="sb-mod-desc">Open double doors together</div></div>
+      <div class="sb-mod"><div class="sb-mod-name">Entity Texture Features</div><div class="sb-mod-desc">Random &amp; emissive textures</div></div>
+      <div class="sb-mod"><div class="sb-mod-name">Fabric API</div><div class="sb-mod-desc">Core Fabric mod APIs</div></div>
+      <div class="sb-mod"><div class="sb-mod-name">Fabric Language Kotlin</div><div class="sb-mod-desc">Kotlin runtime for Fabric mods</div></div>
       <div class="sb-mod"><div class="sb-mod-name">Lithium</div><div class="sb-mod-desc">Performance optimization</div></div>
-      <div class="sb-mod"><div class="sb-mod-name">Not Enough Animations</div><div class="sb-mod-desc">Extra player animations</div></div>
       <div class="sb-mod"><div class="sb-mod-name">Simple Discord Link</div><div class="sb-mod-desc">Chat bridge to Discord</div></div>
       <div class="sb-mod"><div class="sb-mod-name">Spark</div><div class="sb-mod-desc">Performance profiler</div></div>
-      <div class="sb-mod"><div class="sb-mod-name">Simple Voice Chat</div><div class="sb-mod-desc">Proximity voice chat</div></div>
-      <div class="sb-mod"><div class="sb-mod-name">Double Doors</div><div class="sb-mod-desc">Open double doors together</div></div>
-      <div class="sb-mod"><div class="sb-mod-name">Toggleable Item Frames</div><div class="sb-mod-desc">Toggle frame visibility</div></div>
-      <div class="sb-mod"><div class="sb-mod-name">Entity Texture Features</div><div class="sb-mod-desc">Random &amp; emissive textures</div></div>
     </div>
   </div>
 </div>

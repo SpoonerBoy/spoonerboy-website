@@ -9,7 +9,7 @@
       <div class="sb-live-dot"></div>SpoonerCraft &middot; Fabric 26.1.2
     </div>
     <h1 class="sb-page-title">{{#if title}}{{title}}{{else}}Spoonerpack Mods and Resource Packs{{/if}}</h1>
-    <p class="sb-page-excerpt">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Download the SpoonerPack modpack and resource packs, then connect to playmc.spoonerboy.com.{{/if}}</p>
+    <p class="sb-page-excerpt">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Download the SpoonerPack modpack, resource packs, and shader packs, then connect to playmc.spoonerboy.com.{{/if}}</p>
     <div class="sb-btn-row" style="margin-top:28px">
       <div class="sb-ip-box">
         <code>playmc.spoonerboy.com</code>
@@ -24,25 +24,22 @@
 
 {{!-- DOWNLOADS — served from theme assets --}}
 <div class="sb-page-content-wrap" style="max-width:800px;padding-top:0;padding-bottom:0">
+
+  <div class="sb-mc-download-label">Mods</div>
   <div class="sb-mc-downloads">
     <a class="sb-mc-download" href="{{asset "spoonerpack/spoonerpack-mods.zip"}}" download>
       <div class="sb-mc-download-icon">📦</div>
       <div class="sb-mc-download-body">
         <div class="sb-mc-download-title">SpoonerPack Mods</div>
-        <div class="sb-mc-download-desc">Armored Elytra, Entity Model/Texture Features, Fabric API, Iris, JourneyMap, Not Enough Animations, Simple Voice Chat</div>
-        <div class="sb-mc-download-meta">spoonerpack-mods.zip · 8 mods · Fabric 26.1.2</div>
+        <div class="sb-mc-download-desc">Armored Elytra, Entity Model/Texture Features, Fabric API, Iris, JourneyMap, Not Enough Animations, Simple Voice Chat, Sodium</div>
+        <div class="sb-mc-download-meta">spoonerpack-mods.zip · 9 mods · Fabric 26.1.2</div>
       </div>
       <div class="sb-mc-download-btn">Download</div>
     </a>
-    <a class="sb-mc-download" href="{{asset "spoonerpack/ComplementaryReimagined_r5.8.1.zip"}}" download>
-      <div class="sb-mc-download-icon">🎨</div>
-      <div class="sb-mc-download-body">
-        <div class="sb-mc-download-title">Complementary Reimagined</div>
-        <div class="sb-mc-download-desc">Shader-compatible resource pack — place in your resourcepacks folder</div>
-        <div class="sb-mc-download-meta">ComplementaryReimagined_r5.8.1.zip</div>
-      </div>
-      <div class="sb-mc-download-btn">Download</div>
-    </a>
+  </div>
+
+  <div class="sb-mc-download-label">Resource Packs</div>
+  <div class="sb-mc-downloads">
     <a class="sb-mc-download" href="{{asset "spoonerpack/FreshAnimations_v1.10.5.zip"}}" download>
       <div class="sb-mc-download-icon">🎨</div>
       <div class="sb-mc-download-body">
@@ -62,6 +59,20 @@
       <div class="sb-mc-download-btn">Download</div>
     </a>
   </div>
+
+  <div class="sb-mc-download-label">Shader Packs</div>
+  <div class="sb-mc-downloads">
+    <a class="sb-mc-download sb-mc-download-shader" href="{{asset "spoonerpack/ComplementaryReimagined_r5.8.1.zip"}}" download>
+      <div class="sb-mc-download-icon">✨</div>
+      <div class="sb-mc-download-body">
+        <div class="sb-mc-download-title">Complementary Reimagined</div>
+        <div class="sb-mc-download-desc">Requires Iris + Sodium — place the .zip in your shaderpacks folder (do not extract)</div>
+        <div class="sb-mc-download-meta">ComplementaryReimagined_r5.8.1.zip</div>
+      </div>
+      <div class="sb-mc-download-btn">Download</div>
+    </a>
+  </div>
+
 </div>
 
 {{!-- BODY — install guide managed in Ghost Admin --}}

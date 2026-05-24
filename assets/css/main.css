@@ -310,6 +310,11 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .sb-copy-btn:hover { color: var(--text); }
 
+.gh-content .sb-ip-box {
+  display: inline-flex;
+  margin: 8px 0 16px;
+}
+
 /* ── MOD GRID ── */
 .sb-mod-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -1379,7 +1384,20 @@ form[data-members-form].error .message-error { display: block; }
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin: 0 0 40px;
+  margin: 0 0 32px;
+}
+
+.sb-mc-download-label {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 8px 0 12px;
+}
+
+.sb-mc-download-label:first-child {
+  margin-top: 0;
 }
 
 .sb-mc-download {
@@ -1451,6 +1469,24 @@ form[data-members-form].error .message-error { display: block; }
 
 .sb-mc-download:hover .sb-mc-download-btn {
   background: rgba(48, 209, 88, 0.2);
+}
+
+.sb-mc-download-shader:hover {
+  border-color: rgba(100, 200, 255, 0.3);
+}
+
+.sb-mc-download-shader .sb-mc-download-icon {
+  background: rgba(100, 200, 255, 0.08);
+}
+
+.sb-mc-download-shader .sb-mc-download-btn {
+  background: rgba(100, 200, 255, 0.12);
+  color: #64C8FF;
+  border-color: rgba(100, 200, 255, 0.25);
+}
+
+.sb-mc-download-shader:hover .sb-mc-download-btn {
+  background: rgba(100, 200, 255, 0.2);
 }
 
 @media (max-width: 640px) {
