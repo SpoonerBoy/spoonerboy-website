@@ -100,9 +100,27 @@
     }
 
     // ── Reddit full feed (community page only) ──
-    var feedEl = document.getElementById('community-feed');
-    if (feedEl) {
-      loadRedditFeed(feedEl);
+    var homelabFeedEl = document.getElementById('community-feed-homelab');
+    if (homelabFeedEl) {
+      loadRedditFeed(homelabFeedEl, [
+        { name: 'homelab',        color: '#ea580c' },
+        { name: 'Ubiquiti',       color: '#0071e3' },
+        { name: 'unifi',          color: '#0079d3' },
+        { name: 'HomeNetworking', color: '#7c3aed' },
+        { name: 'pchelp',         color: '#16a34a' }
+      ]);
+    }
+
+    var minecraftFeedEl = document.getElementById('community-feed-minecraft');
+    if (minecraftFeedEl) {
+      loadRedditFeed(minecraftFeedEl, [
+        { name: 'Minecraft',         color: '#62a82e' },
+        { name: 'feedthebeast',      color: '#e85d04' },
+        { name: 'ModdedMinecraft',   color: '#7c3aed' },
+        { name: 'fabricmc',          color: '#b4d455' },
+        { name: 'admincraft',        color: '#0071e3' },
+        { name: 'technicalminecraft', color: '#64748b' }
+      ]);
     }
 
     // ── GitHub repos (projects page only) ──
@@ -188,14 +206,8 @@
     });
   }
 
-  function loadRedditFeed(container) {
-    var subs = [
-      { name: 'homelab',        color: '#ea580c' },
-      { name: 'Ubiquiti',       color: '#0071e3' },
-      { name: 'unifi',          color: '#0079d3' },
-      { name: 'HomeNetworking', color: '#7c3aed' },
-      { name: 'pchelp',         color: '#16a34a' }
-    ];
+  function loadRedditFeed(container, subs) {
+    if (!subs || !subs.length) return;
 
     subs.forEach(function(sub) {
       var section = document.createElement('div');
@@ -258,11 +270,13 @@
   }
 
   // Ghost injects "undefined" when a page body hasn't been saved/rendered yet.
-  // Replace it with an empty string so the wrapper stays invisible but intact.
-  document.querySelectorAll('.gh-content').forEach(function(el) {
-    if (el.textContent.trim() === 'undefined') {
-      el.innerHTML = '';
-    }
-  });
+  // Skip post templates so article content is never cleared.
+  if (!document.body.classList.contains('post-template')) {
+    document.querySelectorAll('.gh-content').forEach(function(el) {
+      if (el.textContent.trim() === 'undefined') {
+        el.innerHTML = '';
+      }
+    });
+  }
 
 })();

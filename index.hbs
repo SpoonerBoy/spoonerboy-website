@@ -25,36 +25,6 @@
 
 <hr class="sb-divider">
 
-{{!-- LATEST POSTS --}}
-{{#if posts}}
-<div class="sb-section">
-  <div class="sb-section-label sb-reveal">Latest</div>
-  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">From the blog.</h2></span></div>
-  <div class="sb-post-grid sb-stagger sb-reveal sb-reveal-d2">
-    {{#foreach posts}}
-    <a class="sb-post-card" href="{{url}}">
-      {{#if feature_image}}
-        <img class="sb-post-img" src="{{feature_image}}" alt="{{title}}" loading="lazy">
-      {{else}}
-        <div class="sb-post-img-placeholder">📝</div>
-      {{/if}}
-      <div class="sb-post-body">
-        {{#primary_tag}}<div class="sb-post-tag">{{name}}</div>{{/primary_tag}}
-        <div class="sb-post-title">{{title}}</div>
-        {{#if custom_excerpt}}<div class="sb-post-excerpt">{{custom_excerpt}}</div>{{/if}}
-        <div class="sb-post-meta">
-          <span>{{date format="MMM D, YYYY"}}</span>
-          <span>{{reading_time}}</span>
-        </div>
-      </div>
-    </a>
-    {{/foreach}}
-  </div>
-  {{pagination}}
-</div>
-<hr class="sb-divider">
-{{/if}}
-
 {{!-- STACK --}}
 <div id="stack">
 <div class="sb-section">
@@ -108,7 +78,7 @@
 <div class="sb-section">
   <div class="sb-section-label sb-reveal">Minecraft</div>
   <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">SpoonerCraft SMP.</h2></span></div>
-  <p class="sb-section-sub sb-reveal sb-reveal-d2">A whitelisted Fabric survival server. Community focused, 1.21.10, self-hosted on an HP ProDesk running Ubuntu.</p>
+  <p class="sb-section-sub sb-reveal sb-reveal-d2">A whitelisted Fabric survival server. Community focused, 26.1.2, self-hosted on an HP ProDesk running Ubuntu.</p>
   <div class="sb-mc-panel sb-reveal sb-reveal-d3">
     <div class="sb-mc-top">
       <div>
@@ -145,3 +115,38 @@
     <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/community/">View all community feeds &rarr;</a>
   </div>
 </div>
+
+{{!-- LATEST POSTS — bottom of homepage --}}
+{{#if posts}}
+<hr class="sb-divider">
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">Latest</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">From the blog.</h2></span></div>
+  <p class="sb-section-sub sb-reveal sb-reveal-d2">Homelab write-ups, setup guides, and whatever broke this week.</p>
+  <div class="sb-post-grid sb-stagger sb-reveal sb-reveal-d3">
+    {{#foreach posts limit="3"}}
+    <a class="sb-post-card" href="{{url}}">
+      {{#if feature_image}}
+        <img class="sb-post-img" src="{{feature_image}}" alt="{{title}}" loading="lazy">
+      {{else}}
+        <div class="sb-post-img-placeholder">📝</div>
+      {{/if}}
+      <div class="sb-post-body">
+        {{#primary_tag}}<div class="sb-post-tag">{{name}}</div>{{/primary_tag}}
+        <div class="sb-post-title">{{title}}</div>
+        {{#if custom_excerpt}}
+          <div class="sb-post-excerpt">{{custom_excerpt}}</div>
+        {{else if excerpt}}
+          <div class="sb-post-excerpt">{{excerpt words="24"}}</div>
+        {{/if}}
+        <div class="sb-post-meta">
+          <span>{{date format="MMM D, YYYY"}}</span>
+          <span>{{reading_time}}</span>
+        </div>
+      </div>
+    </a>
+    {{/foreach}}
+  </div>
+  {{pagination}}
+</div>
+{{/if}}

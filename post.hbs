@@ -16,7 +16,11 @@
       </div>
     {{/if}}
     <h1 class="sb-page-title">{{title}}</h1>
-    {{#if custom_excerpt}}<p class="sb-page-excerpt">{{custom_excerpt}}</p>{{/if}}
+    {{#if custom_excerpt}}
+      <p class="sb-page-excerpt">{{custom_excerpt}}</p>
+    {{else if excerpt}}
+      <p class="sb-page-excerpt">{{excerpt words="45"}}</p>
+    {{/if}}
     <div class="sb-page-meta">
       <span>{{date format="MMMM D, YYYY"}}</span>
       <span>{{reading_time}}</span>
@@ -28,11 +32,13 @@
 <hr class="sb-divider">
 
 {{!-- POST CONTENT --}}
+{{#post}}
 <div class="sb-page-content-wrap">
-  <div class="sb-page-content gh-content">
-    {{{content}}}
+  <div class="gh-content">
+    {{content}}
   </div>
 </div>
+{{/post}}
 
 {{!-- PREV / NEXT POSTS --}}
 <hr class="sb-divider">

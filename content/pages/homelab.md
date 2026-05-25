@@ -1,84 +1,147 @@
-# Homelab Documented
-
-> **Ghost Admin Setup:**
-> 1. Go to **Pages → New page**
-> 2. Set the **Page URL (slug)** to `homelab` — this activates the `page-homelab.hbs` template automatically
-> 3. Set **Title** to `Homelab Documented` (or leave blank — the template has a fallback)
-> 4. Set **Excerpt** to your preferred subtitle, or leave blank for the default
-> 5. Paste the content below into the page body editor
-> 6. Click **Publish**
-> 7. The page will be live at `spoonerboy.com/homelab/`
-
+---
+title: Homelab Documented
+slug: homelab
+template: page-homelab
+custom_excerpt: A living record of everything in the lab. Full documentation, configs, and runbooks at homelabdocumented.com.
 ---
 
-## Page body content (paste into Ghost Admin editor)
+<!--
+  HOW TO USE THIS FILE
+  =====================
+  The hero, stat row, active projects list, and lab-update feed are in page-homelab.hbs.
 
-This section appears between the hero and the Active Projects list. Keep it short — 1–3 paragraphs max.
+  Paste the INTRO (markdown) and HARDWARE sections (HTML cards) below into Ghost Admin
+  → Pages → Homelab.
 
----
+  Stat numbers (2 Pis, 0 ports, etc.) are in page-homelab.hbs — edit there when hardware changes.
+-->
 
-**Suggested intro (paste this into Ghost Admin):**
 
-Everything in the homelab gets documented — configs, gotchas, update notes, and full setup guides. Whether it's a fresh Pi-hole install or rebuilding Proxmox from scratch, it's written down.
+<!-- ═══════════════════════════════════════════════
+     INTRO  (Markdown card)
+     ═══════════════════════════════════════════════ -->
 
-The full reference site lives at [homelabdocumented.com](https://homelabdocumented.com), built with the same philosophy: if it runs in the lab, it gets documented.
+Everything in the homelab gets documented — configs, gotchas, update notes, and full setup guides. Whether it's a fresh Pi-hole install, Cloudflare Tunnel routing, or rebuilding Proxmox from scratch, it's written down.
 
----
+The full reference site lives at [homelabdocumented.com](https://homelabdocumented.com). This page is the quick overview of what's running at The Grays.
 
-## "Currently Working On" feed — how it works
 
-The **Currently Working On** section at the bottom of this page is powered by Ghost's post system. It automatically shows any published post tagged with `lab-update`.
+<!-- ═══════════════════════════════════════════════
+     SECTION: RASPBERRY PI 4 (primary)  (HTML card)
+     ═══════════════════════════════════════════════ -->
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">Primary node</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Raspberry Pi 4</h2></span></div>
+  <div class="sb-cards sb-stagger sb-reveal sb-reveal-d2">
+    <div class="sb-card">
+      <div class="sb-card-label">Hardware</div>
+      <ul class="sb-spec-list">
+        <li class="sb-spec-item"><strong>Model</strong> Raspberry Pi 4</li>
+        <li class="sb-spec-item"><strong>OS</strong> Raspberry Pi OS</li>
+        <li class="sb-spec-item"><strong>Network</strong> Wired ethernet, static IP</li>
+        <li class="sb-spec-item"><strong>Role</strong> Primary services host</li>
+        <li class="sb-spec-item"><strong>Management</strong> Portainer Stacks</li>
+      </ul>
+    </div>
+    <div class="sb-card">
+      <div class="sb-card-label">Services running</div>
+      <div class="sb-service-grid">
+        <div class="sb-service">Ghost 5</div>
+        <div class="sb-service">MySQL 8.0</div>
+        <div class="sb-service">n8n</div>
+        <div class="sb-service">Homepage</div>
+        <div class="sb-service">Portainer</div>
+        <div class="sb-service">Uptime Kuma</div>
+        <div class="sb-service">Home Assistant</div>
+        <div class="sb-service">Nginx Proxy Manager</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-**To add a lab update:**
 
-1. Go to **Posts → New post** in Ghost Admin
-2. Write your update — what you're building, what broke, what you fixed
-3. Add the tag `lab-update` to the post
-4. Publish it
+<!-- ═══════════════════════════════════════════════
+     SECTION: DNS PI  (HTML card)
+     ═══════════════════════════════════════════════ -->
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">DNS node</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Raspberry Pi — DNS</h2></span></div>
+  <div class="sb-cards sb-stagger sb-reveal sb-reveal-d2">
+    <div class="sb-card">
+      <div class="sb-card-label">Hardware</div>
+      <ul class="sb-spec-list">
+        <li class="sb-spec-item"><strong>Model</strong> Raspberry Pi</li>
+        <li class="sb-spec-item"><strong>OS</strong> Raspberry Pi OS</li>
+        <li class="sb-spec-item"><strong>Network</strong> Wired ethernet, static IP</li>
+        <li class="sb-spec-item"><strong>Role</strong> Network-wide DNS filtering</li>
+      </ul>
+    </div>
+    <div class="sb-card">
+      <div class="sb-card-label">Services running</div>
+      <div class="sb-service-grid">
+        <div class="sb-service">Pi-hole v6</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-It will appear instantly in the feed on this page. No theme changes needed.
 
-**Suggested content for lab updates:**
-- Short notes on what you're currently setting up
-- Progress updates on longer projects (e.g., "Working on Cloudflare Tunnel setup")
-- Troubleshooting notes ("Pi-hole container kept crashing — fixed with...")
-- New service announcements ("Added Uptime Kuma for monitoring")
+<!-- ═══════════════════════════════════════════════
+     SECTION: HP PRODESK (game server)  (HTML card)
+     ═══════════════════════════════════════════════ -->
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">Game server</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">HP ProDesk G4 400 SFF</h2></span></div>
+  <div class="sb-cards sb-stagger sb-reveal sb-reveal-d2">
+    <div class="sb-card">
+      <div class="sb-card-label">Hardware</div>
+      <ul class="sb-spec-list">
+        <li class="sb-spec-item"><strong>Model</strong> HP ProDesk G4 400 SFF</li>
+        <li class="sb-spec-item"><strong>OS</strong> Ubuntu 24.04 LTS</li>
+        <li class="sb-spec-item"><strong>CPU</strong> Intel Core i5</li>
+        <li class="sb-spec-item"><strong>RAM</strong> 16 GB</li>
+        <li class="sb-spec-item"><strong>Storage</strong> 512 GB SSD</li>
+        <li class="sb-spec-item"><strong>Role</strong> Minecraft + Cloudflare tunnel host</li>
+      </ul>
+    </div>
+    <div class="sb-card">
+      <div class="sb-card-label">Services running</div>
+      <div class="sb-service-grid">
+        <div class="sb-service">SpoonerCraft</div>
+        <div class="sb-service">AMP Panel</div>
+        <div class="sb-service">Webmin</div>
+        <div class="sb-service">Cloudflare Tunnel</div>
+      </div>
+    </div>
+  </div>
+</div>
 
----
 
-## Adding new projects to the Active Projects list
-
-The project cards are hardcoded in `page-homelab.hbs`. To add a new project:
-
-1. Open `page-homelab.hbs` in the theme files
-2. Copy an existing `<a class="sb-hl-project">` block
-3. Update the icon, name, description, tags, and href
-4. Set the status badge class:
-   - `sb-hl-status-live` → green "● Running"
-   - `sb-hl-status-wip` → orange "● In Progress"
-   - `sb-hl-status-planned` → gray "Planned"
-   - `sb-hl-status-external` → blue "↗ Visit"
-5. Rebuild and upload the theme zip
-
----
-
-## Navigation
-
-To add this page to your site navigation:
-
-1. Ghost Admin → **Settings → Navigation**
-2. Add label: `Homelab` or `Docs`
-3. Add URL: `/homelab/`
-4. Save
-
----
-
-## Page Settings (Ghost Admin)
-
-| Field      | Value                                                                 |
-|------------|-----------------------------------------------------------------------|
-| Title      | Homelab Documented                                                    |
-| Slug       | `homelab`                                                             |
-| Excerpt    | A living record of everything in the lab. Full docs at homelabdocumented.com. |
-| Tags       | (optional — not displayed on this template)                          |
-| Template   | Auto-selected via slug match (`page-homelab.hbs`)                    |
+<!-- ═══════════════════════════════════════════════
+     SECTION: UNIFI NETWORKING  (HTML card)
+     ═══════════════════════════════════════════════ -->
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">Networking</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">UniFi Stack.</h2></span></div>
+  <div class="sb-cards sb-stagger sb-reveal sb-reveal-d2">
+    <div class="sb-card">
+      <div class="sb-card-label">Hardware</div>
+      <ul class="sb-spec-list">
+        <li class="sb-spec-item"><strong>Router</strong> UniFi Dream Machine</li>
+        <li class="sb-spec-item"><strong>Switches</strong> UniFi managed switches</li>
+        <li class="sb-spec-item"><strong>Access Points</strong> UniFi APs</li>
+        <li class="sb-spec-item"><strong>Subnets</strong> Main LAN + server VLAN</li>
+      </ul>
+    </div>
+    <div class="sb-card">
+      <div class="sb-card-label">Access &amp; Security</div>
+      <ul class="sb-spec-list">
+        <li class="sb-spec-item"><strong>Remote access</strong> Tailscale subnet routing</li>
+        <li class="sb-spec-item"><strong>Public exposure</strong> Cloudflare Tunnel only</li>
+        <li class="sb-spec-item"><strong>Open ports</strong> Zero — tunnel handles everything</li>
+        <li class="sb-spec-item"><strong>SSL</strong> Wildcard cert via Cloudflare DNS</li>
+        <li class="sb-spec-item"><strong>DNS filtering</strong> Pi-hole v6 network-wide</li>
+      </ul>
+    </div>
+  </div>
+</div>

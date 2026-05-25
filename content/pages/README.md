@@ -30,7 +30,8 @@ All editable body content lives in these `.md` files and in **Ghost Admin**.
 | File | Ghost slug | Template | Notes |
 |------|-----------|----------|-------|
 | `about.md` | `/about/` | page-about | 3 HTML card sections |
-| `lab.md` | `/lab/` | page-lab | 4 HTML card sections; stat numbers in template |
+| `homelab.md` | `/homelab/` | page-homelab | Intro + hardware HTML cards in Ghost Admin; stat row + projects in template |
+| `lab.md` | `/lab/` | page-lab | Legacy — content merged into homelab.md |
 | `guides.md` | `/guides/` | page-guides | 2 HTML card sections; add cards for new guides |
 | `spoonercraft.md` | `/spoonercraft/` | page-spoonercraft | 3 HTML card sections; hero + MC stats in template |
 | `mc-mods.md` | `/mc-mods/` | page-mc-mods | Downloads in template (`assets/spoonerpack/`); install guide in Ghost Admin |
@@ -48,4 +49,5 @@ All editable body content lives in these `.md` files and in **Ghost Admin**.
 - **Guide pages** (pihole-docker, ubuntu-server, proxmox): paste the markdown body directly into Ghost Admin's editor. Ghost renders markdown natively.
 - **Layout pages** (about, lab, guides, spoonercraft, projects): each section marked `(HTML card)` in the `.md` file should be pasted into a separate HTML card block in Ghost Admin.
 - **Page title / excerpt**: set these in Ghost Admin under **Page settings → Meta** (or the page title field). The `.md` frontmatter is just documentation.
-- **Stat numbers on Lab page** (2 Pis, 0 open ports, 12+ services): these are hardcoded in `page-lab.hbs` — edit that file when your hardware changes.
+- **Stat numbers on Homelab page** (2 Pis, 0 open ports, 12+ services): hardcoded in `page-homelab.hbs` — edit that file when your hardware changes.
+- **Post intro text**: set the **Excerpt** field per post in Ghost Admin — see `content/posts/README.md`.

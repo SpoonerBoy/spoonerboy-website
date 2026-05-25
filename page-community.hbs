@@ -7,7 +7,7 @@
   <div class="sb-hero-inner">
     <div class="sb-eyebrow"><div class="sb-live-dot"></div>Live from Reddit &middot; Updated on every visit</div>
     <h1 class="sb-hero-title">{{#if title}}{{title}}{{else}}Community<br><span class="dim">Feeds.</span>{{/if}}</h1>
-    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Live posts from the homelab and networking communities — r/homelab, r/Ubiquiti, r/unifi, r/HomeNetworking, and r/pchelp.{{/if}}</p>
+    <p class="sb-hero-sub">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Live posts from Minecraft, homelab, and networking communities — refreshed every visit.{{/if}}</p>
   </div>
 </section>
 
@@ -22,7 +22,18 @@
 </div>
 {{/page}}
 
-{{!-- LIVE REDDIT FEED — JS-driven; keep in template --}}
+{{!-- LIVE REDDIT FEEDS — JS-driven --}}
 <div class="sb-section">
-  <div id="community-feed"></div>
+  <div class="sb-section-label sb-reveal">Minecraft</div>
+  <div class="sb-line-reveal sb-reveal"><span><h2 class="sb-section-title">Minecraft feeds.</h2></span></div>
+  <p class="sb-section-sub">Common Minecraft subreddits — mods, servers, builds, and community news.</p>
+  <div id="community-feed-minecraft"></div>
+</div>
+
+<hr class="sb-divider">
+
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">Homelab &amp; Networking</div>
+  <div class="sb-line-reveal sb-reveal"><span><h2 class="sb-section-title">Infrastructure feeds.</h2></span></div>
+  <div id="community-feed-homelab"></div>
 </div>
