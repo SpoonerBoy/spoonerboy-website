@@ -65,6 +65,7 @@
     "page-lab": "Lab",
     "page-projects": "Projects",
     "page-guides": "Guides Landing",
+    "page-minecraft-server": "Guide: Minecraft Server + AMP",
     "page-pihole-docker": "Guide: Pi-hole Docker",
     "page-ubuntu-server": "Guide: Ubuntu Server",
     "page-proxmox": "Guide: Proxmox",

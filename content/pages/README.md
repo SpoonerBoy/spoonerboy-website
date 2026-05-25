@@ -1,27 +1,19 @@
 # SpoonerBoy — Page Content
 
-Each `.md` file here is the source of truth for a Ghost Admin page.
+Each `.md` file here is the source of truth for a Ghost Admin **page**.
+
+**Site reference:** see `content/SITE-REF.md` for full URL map, nav, and content strategy.
+
+**Homepage:** theme-controlled — see `content/pages/home.md` for copy reference.
 
 ---
 
-## How it works
+## Gaming-first content split
 
-The theme templates (`page-*.hbs`) are now **thin shells** — they only contain:
-- The page hero/header (pulled from Ghost Admin page title + excerpt)
-- Live/dynamic widgets (Minecraft stats, Reddit feed, GitHub repos)
-
-All editable body content lives in these `.md` files and in **Ghost Admin**.
-
----
-
-## Workflow: editing a page
-
-1. Open the `.md` file here to read/edit the content locally.
-2. Go to **Ghost Admin → Pages → [page name]**.
-3. Use the Koenig editor to paste/update the content:
-   - **Plain text / headings / lists** → use a Markdown card or type directly.
-   - **Card grids, spec lists, mod grid** (sections marked `HTML card`) → use an **HTML card** and paste the HTML block.
-4. Click **Update** in Ghost Admin. Changes go live immediately — no theme redeploy needed.
+| Site | Content type |
+|------|--------------|
+| **spoonerboy.com** | SpoonerCraft, modpacks, server guides, gaming posts |
+| **homelabdocumented.com** | Pi-hole, Proxmox, UniFi, infrastructure runbooks |
 
 ---
 
@@ -29,25 +21,39 @@ All editable body content lives in these `.md` files and in **Ghost Admin**.
 
 | File | Ghost slug | Template | Notes |
 |------|-----------|----------|-------|
-| `about.md` | `/about/` | page-about | 3 HTML card sections |
-| `homelab.md` | `/homelab/` | page-homelab | Intro + hardware HTML cards in Ghost Admin; stat row + projects in template |
-| `lab.md` | `/lab/` | page-lab | Legacy — content merged into homelab.md |
-| `guides.md` | `/guides/` | page-guides | 2 HTML card sections; add cards for new guides |
-| `spoonercraft.md` | `/spoonercraft/` | page-spoonercraft | 3 HTML card sections; hero + MC stats in template |
-| `mc-mods.md` | `/mc-mods/` | page-mc-mods | Downloads in template (`assets/spoonerpack/`); install guide in Ghost Admin |
-| `projects.md` | `/projects/` | page-projects | 1 HTML card; live GitHub grid in template |
-| `community.md` | `/community/` | page-community | Leave body blank; live Reddit feed in template |
-| `github.md` | `/github/` | page-github | Redirect page; leave body blank |
-| `pihole-docker.md` | `/pihole-docker/` | page-pihole-docker | Full markdown guide — paste directly into Ghost |
-| `ubuntu-server.md` | `/ubuntu-server/` | page-ubuntu-server | Full markdown guide — paste directly into Ghost |
-| `proxmox.md` | `/proxmox/` | page-proxmox | Full markdown guide — paste directly into Ghost |
+| `home.md` | *(theme only)* | `index.hbs` | Homepage copy reference — not a Ghost page |
+| `spoonercraft.md` | `/spoonercraft/` | page-spoonercraft | Mod list, rules, apply — hero in template |
+| `mc-mods.md` | `/mc-mods/` | page-mc-mods | Downloads in template; install guide in Admin |
+| `guides.md` | `/guides/` | page-guides | **Server setup guides** — gaming/admin focus |
+| `minecraft-server.md` | `/minecraft-server/` | page-minecraft-server | Ubuntu + AMP guide — paste markdown in Admin |
+| `community.md` | `/community/` | page-community | Reddit feeds in template |
+| `about.md` | `/about/` | page-about | Creator bio |
+| `homelab.md` | `/homelab/` | page-homelab | Lab overview — de-emphasized; link to homelabdocumented.com |
+| `projects.md` | `/projects/` | page-projects | GitHub grid in template |
+| `lab.md` | `/lab/` | page-lab | **Legacy** — content merged into homelab.md |
+
+### Legacy guide pages (link from homelabdocumented.com, not homepage)
+
+| File | Slug | Template |
+|------|------|----------|
+| `pihole-docker.md` | `/pihole-docker/` | page-pihole-docker |
+| `ubuntu-server.md` | `/ubuntu-server/` | page-ubuntu-server |
+| `proxmox.md` | `/proxmox/` | page-proxmox |
+
+### Blog posts
+
+See `content/posts/README.md` — posts use Ghost **Posts**, not Pages.
 
 ---
 
-## Tips
+## Homepage "What's new" tags
 
-- **Guide pages** (pihole-docker, ubuntu-server, proxmox): paste the markdown body directly into Ghost Admin's editor. Ghost renders markdown natively.
-- **Layout pages** (about, lab, guides, spoonercraft, projects): each section marked `(HTML card)` in the `.md` file should be pasted into a separate HTML card block in Ghost Admin.
-- **Page title / excerpt**: set these in Ghost Admin under **Page settings → Meta** (or the page title field). The `.md` frontmatter is just documentation.
-- **Stat numbers on Homelab page** (2 Pis, 0 open ports, 12+ services): hardcoded in `page-homelab.hbs` — edit that file when your hardware changes.
-- **Post intro text**: set the **Excerpt** field per post in Ghost Admin — see `content/posts/README.md`.
+Tag posts with `minecraft` or `server-update` to appear on the homepage feed.
+
+---
+
+## Workflow
+
+1. Edit the `.md` file locally
+2. Ghost Admin → Pages → paste HTML cards or markdown
+3. Upload theme zip when templates (`index.hbs`, etc.) change

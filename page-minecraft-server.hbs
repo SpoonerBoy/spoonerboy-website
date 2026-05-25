@@ -1,0 +1,36 @@
+{{!< default}}
+
+{{!-- HERO --}}
+<section class="sb-page-hero" style="background:#0a1a0a">
+  <div class="sb-hero-grid"></div>
+  <div class="sb-hero-glow" style="background:radial-gradient(ellipse at 50% 0%, rgba(48,209,88,0.1) 0%, transparent 70%)"></div>
+  <div class="sb-page-hero-inner">
+    <div class="sb-page-eyebrow">
+      {{#if tags}}
+        {{#foreach tags}}<span class="sb-page-tag">{{name}}</span>{{/foreach}}
+      {{else}}
+        <span class="sb-page-tag">Guide</span>
+        <span class="sb-page-tag">Minecraft</span>
+        <span class="sb-page-tag">AMP</span>
+        <span class="sb-page-tag">Ubuntu</span>
+      {{/if}}
+    </div>
+    <h1 class="sb-page-title">{{#if title}}{{title}}{{else}}Minecraft Server on Ubuntu + AMP{{/if}}</h1>
+    <p class="sb-page-excerpt">{{#if custom_excerpt}}{{custom_excerpt}}{{else}}Set up a Fabric Minecraft server on Ubuntu using CubeCoders AMP — the same stack that runs SpoonerCraft.{{/if}}</p>
+    <div class="sb-page-meta">
+      <span>{{date format="MMMM D, YYYY"}}</span>
+      <span>{{reading_time}}</span>
+    </div>
+  </div>
+</section>
+
+<hr class="sb-divider">
+
+{{!-- CONTENT — managed in Ghost Admin --}}
+{{#page}}
+<div class="sb-page-content-wrap">
+  <div class="gh-content">
+    {{content}}
+  </div>
+</div>
+{{/page}}

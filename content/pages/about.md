@@ -2,7 +2,7 @@
 title: About
 slug: about
 template: page-about
-custom_excerpt: Homelab tinkerer, self-hosting enthusiast, and Minecraft server admin running everything from a Raspberry Pi in my house.
+custom_excerpt: Creator, Minecraft server owner, and community builder. Running SpoonerCraft from Ohio — modpacks, server updates, and guides for hosting your own game server.
 ---
 
 <!--
@@ -24,19 +24,19 @@ custom_excerpt: Homelab tinkerer, self-hosting enthusiast, and Minecraft server 
   <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Welcome to SpoonerBoy.com</h2></span></div>
   <div class="sb-cards sb-stagger sb-reveal sb-reveal-d2">
     <div class="sb-card">
-      <div class="sb-card-icon gr">🖥</div>
-      <div class="sb-card-title">The Grays</div>
-      <div class="sb-card-desc">My homelab — a self-hosted setup built on a pair of Raspberry Pis, UniFi networking, and way too many Docker containers. This site is self-hosted on Ghost, managed through Portainer, and tunneled out via Cloudflare.</div>
+      <div class="sb-card-icon gr">⛏</div>
+      <div class="sb-card-title">SpoonerCraft</div>
+      <div class="sb-card-desc">I run SpoonerCraft — a whitelisted Fabric SMP with proximity voice chat, a curated modpack, and a tight-knit community. Server lives at playmc.spoonerboy.com on an HP ProDesk managed with AMP.</div>
     </div>
     <div class="sb-card">
-      <div class="sb-card-icon or">⛏</div>
-      <div class="sb-card-title">SpoonerCraft</div>
-      <div class="sb-card-desc">I run a whitelisted Fabric SMP Minecraft server called SpoonerCraft. It lives on an HP ProDesk running Ubuntu, managed with AMP Panel, accessible at playmc.spoonerboy.com.</div>
+      <div class="sb-card-icon or">🎮</div>
+      <div class="sb-card-title">Creator &amp; server owner</div>
+      <div class="sb-card-desc">Spoonerboy.com is my home for server updates, modpack releases, Minecraft guides, and community content. Less infrastructure nerd, more community leader.</div>
     </div>
     <div class="sb-card">
       <div class="sb-card-icon bl">✍️</div>
-      <div class="sb-card-title">What I write about</div>
-      <div class="sb-card-desc">Homelab builds, self-hosting guides, networking deep dives, and the occasional "here's what went wrong and how I fixed it" post. I document things the way I wish someone had when I was starting out.</div>
+      <div class="sb-card-title">What I publish</div>
+      <div class="sb-card-desc">Modpack changelogs, server setup guides (Ubuntu + AMP, Cloudflare Tunnels), and whatever broke on the server this week. Deep homelab docs live at homelabdocumented.com.</div>
     </div>
   </div>
 </div>

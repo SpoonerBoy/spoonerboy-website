@@ -1597,3 +1597,58 @@ form[data-members-form].error .message-error { display: block; }
     align-items: flex-start;
   }
 }
+
+/* =============================================================
+   POWERED BY — compact homelab footer strip (homepage)
+   ============================================================= */
+
+.sb-powered-by {
+  padding: 0 48px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sb-powered-by-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--s1);
+  border: 0.5px solid var(--b1);
+  border-radius: 14px;
+  padding: 24px 32px;
+}
+
+.sb-powered-by-label {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+
+.sb-powered-by-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.sb-powered-by-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sb-powered-by-actions {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .sb-powered-by { padding: 0 24px 60px; }
+  .sb-powered-by-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -182,8 +182,8 @@
     return '<div class="sb-reddit-thumb" style="display:flex;align-items:center;justify-content:center;font-size:18px">' + (p.is_self ? '📝' : '🔗') + '</div>';
   }
 
-  function loadRedditTeaser(el) {
-    Promise.all(['homelab', 'Ubiquiti', 'unifi'].map(function(sub) {
+    function loadRedditTeaser(el) {
+    Promise.all(['Minecraft', 'fabricmc', 'admincraft'].map(function(sub) {
       return fetch('https://www.reddit.com/r/' + sub + '/hot.json?limit=5&raw_json=1')
         .then(function(r) { return r.json(); })
         .then(function(d) {

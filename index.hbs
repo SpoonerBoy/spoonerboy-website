@@ -1,89 +1,41 @@
 {{!< default}}
 
-{{!-- HERO --}}
-<section class="sb-hero">
+{{!-- HERO — Spoonerboy.com front and center, gaming creator brand --}}
+<section class="sb-hero" style="background:#0a0a0f">
   <div class="sb-hero-grid"></div>
-  <div class="sb-hero-glow"></div>
+  <div class="sb-hero-glow" style="background:radial-gradient(ellipse at 50% 0%, rgba(48,209,88,0.1) 0%, transparent 70%)"></div>
   <div class="sb-hero-inner">
-    <div class="sb-eyebrow"><div class="sb-live-dot"></div>Self-hosted &middot; Celina, Ohio &middot; The Grays</div>
+    <div class="sb-eyebrow" style="background:rgba(48,209,88,0.08);border-color:rgba(48,209,88,0.25);color:var(--green)">
+      <div class="sb-live-dot"></div>Ohio &middot; Minecraft &middot; Community
+    </div>
     <h1 class="sb-hero-title">Spoonerboy<span class="dim">.com</span></h1>
-    <p class="sb-hero-sub">Builds, breakdowns, and deep dives from a Raspberry Pi cluster running in my house. No cloud bills. Just Docker and stubbornness.</p>
+    <p class="sb-hero-sub">Creator, server owner, and community builder. SpoonerCraft SMP, modpacks, server updates, and guides for running your own game server at home.</p>
     <div class="sb-btn-row">
-      <a class="sb-btn sb-btn-blue" href="#stack">Explore the stack</a>
-      <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/guides/">Read the guides</a>
-      <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/spoonercraft/">Join SpoonerCraft</a>
-      <a class="sb-btn sb-btn-ghost" href="https://github.com/SpoonerBoy" target="_blank" rel="noopener">GitHub</a>
+      <a class="sb-btn sb-btn-blue" href="{{@site.url}}/spoonercraft/">Join SpoonerCraft</a>
+      <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/mc-mods/">Get the modpack</a>
+      <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/guides/">Server guides</a>
     </div>
     <div class="sb-stat-row">
-      <div class="sb-stat"><div class="sb-stat-val g" data-mc-count="online">—</div><div class="sb-stat-lbl">MC players online</div></div>
-      <div class="sb-stat"><div class="sb-stat-val">2</div><div class="sb-stat-lbl">Raspberry Pis</div></div>
-      <div class="sb-stat"><div class="sb-stat-val b">100%</div><div class="sb-stat-lbl">Self-hosted</div></div>
-      <div class="sb-stat"><div class="sb-stat-val">$0</div><div class="sb-stat-lbl">Cloud bills</div></div>
+      <div class="sb-stat"><div class="sb-stat-val g" data-mc-count="online">—</div><div class="sb-stat-lbl">Players online</div></div>
+      <div class="sb-stat"><div class="sb-stat-val" data-mc-count="max">—</div><div class="sb-stat-lbl">Max players</div></div>
+      <div class="sb-stat"><div class="sb-stat-val g" data-mc-count="status">—</div><div class="sb-stat-lbl">Server status</div></div>
+      <div class="sb-stat"><div class="sb-stat-val t">Fabric</div><div class="sb-stat-lbl">26.1.2</div></div>
     </div>
   </div>
 </section>
 
 <hr class="sb-divider">
 
-{{!-- STACK --}}
-<div id="stack">
-<div class="sb-section">
-  <div class="sb-section-label sb-reveal">The infrastructure</div>
-  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Everything runs at home.</h2></span></div>
-  <p class="sb-section-sub sb-reveal sb-reveal-d2">No cloud subscriptions. No monthly fees. Just hardware, Docker, and a lot of trial and error.</p>
-  <div class="sb-cards sb-stagger sb-reveal sb-reveal-d3">
-    <div class="sb-card"><div class="sb-card-icon bl">🌐</div><div class="sb-card-title">UniFi Network</div><div class="sb-card-desc">Full UniFi stack with VLANs, proper IoT segmentation, and a Dream Machine at the core.</div></div>
-    <div class="sb-card"><div class="sb-card-icon gr">🐳</div><div class="sb-card-title">Docker / Portainer</div><div class="sb-card-desc">Every service runs as a Portainer stack — Homepage, Uptime Kuma, Ghost, Pi-hole, n8n and more.</div></div>
-    <div class="sb-card"><div class="sb-card-icon te">☁️</div><div class="sb-card-title">Cloudflare Tunnels</div><div class="sb-card-desc">All public services exposed cleanly — zero open ports on the router, wildcard SSL via Cloudflare.</div></div>
-    <div class="sb-card"><div class="sb-card-icon or">🖥</div><div class="sb-card-title">Raspberry Pi Cluster</div><div class="sb-card-desc">Two Pis running the show — DNS, monitoring, Home Assistant, and this very website.</div></div>
-  </div>
-</div>
-</div>
-
-<hr class="sb-divider">
-
-{{!-- GUIDES TEASER --}}
-<div class="sb-section">
-  <div class="sb-section-label sb-reveal">Documentation</div>
-  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Step-by-step guides.</h2></span></div>
-  <p class="sb-section-sub sb-reveal sb-reveal-d2">Learn how to build the stack piece by piece. From fresh installs to production deployments.</p>
-  <div class="sb-cards sb-stagger sb-reveal sb-reveal-d3">
-    <a href="{{@site.url}}/pihole-docker/" class="sb-card sb-card-link">
-      <div class="sb-card-icon bl">🕳️</div>
-      <div class="sb-card-title">Pi-hole in Docker</div>
-      <div class="sb-card-desc">Network-wide DNS filtering and ad blocking for your entire homelab.</div>
-      <div style="margin-top:12px;color:var(--muted);font-size:13px">Learn more →</div>
-    </a>
-    <a href="{{@site.url}}/ubuntu-server/" class="sb-card sb-card-link">
-      <div class="sb-card-icon or">🐧</div>
-      <div class="sb-card-title">Ubuntu Server Setup</div>
-      <div class="sb-card-desc">From fresh install to production-ready with security hardening and Docker.</div>
-      <div style="margin-top:12px;color:var(--muted);font-size:13px">Learn more →</div>
-    </a>
-    <a href="{{@site.url}}/proxmox/" class="sb-card sb-card-link">
-      <div class="sb-card-icon gr">🖥️</div>
-      <div class="sb-card-title">Proxmox Hypervisor</div>
-      <div class="sb-card-desc">Enterprise virtualization for your homelab. VMs, containers, and clustering.</div>
-      <div style="margin-top:12px;color:var(--muted);font-size:13px">Learn more →</div>
-    </a>
-  </div>
-  <div class="sb-btn-row sb-reveal sb-reveal-d4" style="justify-content:flex-start;margin-top:20px">
-    <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/guides/">View all guides &rarr;</a>
-  </div>
-</div>
-
-<hr class="sb-divider">
-
-{{!-- SPOONERCRAFT TEASER --}}
+{{!-- SPOONERCRAFT --}}
 <div class="sb-section">
   <div class="sb-section-label sb-reveal">Minecraft</div>
   <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">SpoonerCraft SMP.</h2></span></div>
-  <p class="sb-section-sub sb-reveal sb-reveal-d2">A whitelisted Fabric survival server. Community focused, 26.1.2, self-hosted on an HP ProDesk running Ubuntu.</p>
+  <p class="sb-section-sub sb-reveal sb-reveal-d2">Whitelisted Fabric survival. Proximity voice chat, community events, and a curated modpack — self-hosted in Ohio.</p>
   <div class="sb-mc-panel sb-reveal sb-reveal-d3">
     <div class="sb-mc-top">
       <div>
         <h3>Join the server</h3>
-        <p>Whitelist applications open. Good vibes only.</p>
+        <p>Whitelist open — apply, install the modpack, and connect.</p>
         <div class="sb-ip-box">
           <code>playmc.spoonerboy.com</code>
           <button class="sb-copy-btn" data-copy="playmc.spoonerboy.com">Copy</button>
@@ -95,41 +47,35 @@
       </div>
     </div>
   </div>
-  <div class="sb-btn-row sb-reveal sb-reveal-d4" style="justify-content:flex-start;margin-top:20px">
-    <a class="sb-btn sb-btn-blue" href="{{@site.url}}/spoonercraft/">View server page</a>
+  <div class="sb-mod-grid sb-reveal sb-reveal-d3" style="margin-top:20px;border-radius:14px;overflow:hidden">
+    <div class="sb-mod"><div class="sb-mod-name">Simple Voice Chat</div><div class="sb-mod-desc">Proximity voice</div></div>
+    <div class="sb-mod"><div class="sb-mod-name">JourneyMap</div><div class="sb-mod-desc">Live world map</div></div>
+    <div class="sb-mod"><div class="sb-mod-name">Iris + Sodium</div><div class="sb-mod-desc">Shaders &amp; FPS</div></div>
+    <div class="sb-mod"><div class="sb-mod-name">Fresh Animations</div><div class="sb-mod-desc">Resource pack</div></div>
+  </div>
+  <div class="sb-btn-row sb-reveal sb-reveal-d4" style="justify-content:flex-start;margin-top:20px;margin-bottom:0">
+    <a class="sb-btn sb-btn-blue" href="{{@site.url}}/spoonercraft/">Server page</a>
+    <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/mc-mods/">Mods &amp; downloads</a>
     <a class="sb-btn sb-btn-ghost" href="https://forms.gle/Xbn5PfNaYGfu74DC6" target="_blank" rel="noopener">Apply to join</a>
   </div>
 </div>
 
 <hr class="sb-divider">
 
-{{!-- COMMUNITY TEASER --}}
+{{!-- WHAT'S NEW — posts tagged minecraft or server-update --}}
+{{#get "posts" filter="tag:[minecraft,server-update]" limit="3" include="tags"}}
 <div class="sb-section">
-  <div class="sb-section-label sb-reveal">Community</div>
-  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">What the homelab community is saying.</h2></span></div>
-  <p class="sb-section-sub sb-reveal sb-reveal-d2">Live posts from r/homelab, r/Ubiquiti, and r/unifi — refreshed on every visit.</p>
-  <div class="sb-reddit-grid sb-reveal sb-reveal-d3" id="hp-reddit-teaser">
-    <div style="padding:40px;text-align:center;color:var(--muted);font-family:'DM Mono',monospace;font-size:13px">Loading posts...</div>
-  </div>
-  <div class="sb-btn-row sb-reveal sb-reveal-d4" style="justify-content:flex-start;margin-top:20px">
-    <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/community/">View all community feeds &rarr;</a>
-  </div>
-</div>
-
-{{!-- LATEST POSTS — bottom of homepage --}}
-{{#if posts}}
-<hr class="sb-divider">
-<div class="sb-section">
-  <div class="sb-section-label sb-reveal">Latest</div>
-  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">From the blog.</h2></span></div>
-  <p class="sb-section-sub sb-reveal sb-reveal-d2">Homelab write-ups, setup guides, and whatever broke this week.</p>
+  <div class="sb-section-label sb-reveal">Updates</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">What's new.</h2></span></div>
+  <p class="sb-section-sub sb-reveal sb-reveal-d2">Modpack changes, server news, and Minecraft guides — tag posts <code class="sb-hl-tag-hint">minecraft</code> or <code class="sb-hl-tag-hint">server-update</code> to show here.</p>
+  {{#if posts}}
   <div class="sb-post-grid sb-stagger sb-reveal sb-reveal-d3">
-    {{#foreach posts limit="3"}}
+    {{#foreach posts}}
     <a class="sb-post-card" href="{{url}}">
       {{#if feature_image}}
         <img class="sb-post-img" src="{{feature_image}}" alt="{{title}}" loading="lazy">
       {{else}}
-        <div class="sb-post-img-placeholder">📝</div>
+        <div class="sb-post-img-placeholder">⛏️</div>
       {{/if}}
       <div class="sb-post-body">
         {{#primary_tag}}<div class="sb-post-tag">{{name}}</div>{{/primary_tag}}
@@ -147,6 +93,74 @@
     </a>
     {{/foreach}}
   </div>
-  {{pagination}}
+  {{else}}
+  <div class="sb-hl-empty-state sb-reveal sb-reveal-d3">
+    <div class="sb-hl-empty-icon">📰</div>
+    <p class="sb-hl-empty-title">No gaming updates yet</p>
+    <p class="sb-hl-empty-desc">Publish a post tagged <code class="sb-hl-tag-hint">minecraft</code> or <code class="sb-hl-tag-hint">server-update</code> and it will appear here.</p>
+  </div>
+  {{/if}}
 </div>
-{{/if}}
+<hr class="sb-divider">
+{{/get}}
+
+{{!-- COMMUNITY — Minecraft Reddit teaser --}}
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">Community</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">From the Minecraft community.</h2></span></div>
+  <p class="sb-section-sub sb-reveal sb-reveal-d2">Live posts from r/Minecraft, r/fabricmc, and r/admincraft — refreshed every visit.</p>
+  <div class="sb-reddit-grid sb-reveal sb-reveal-d3" id="hp-reddit-teaser">
+    <div style="padding:40px;text-align:center;color:var(--muted);font-family:'DM Mono',monospace;font-size:13px">Loading posts...</div>
+  </div>
+  <div class="sb-btn-row sb-reveal sb-reveal-d4" style="justify-content:flex-start;margin-top:20px;margin-bottom:0">
+    <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/community/">All community feeds &rarr;</a>
+  </div>
+</div>
+
+<hr class="sb-divider">
+
+{{!-- SERVER GUIDES TEASER --}}
+<div class="sb-section">
+  <div class="sb-section-label sb-reveal">Guides</div>
+  <div class="sb-line-reveal sb-reveal sb-reveal-d1"><span><h2 class="sb-section-title">Server setup guides.</h2></span></div>
+  <p class="sb-section-sub sb-reveal sb-reveal-d2">For players and server admins — host Minecraft at home, expose it safely, and manage with AMP.</p>
+  <div class="sb-cards sb-stagger sb-reveal sb-reveal-d3">
+    <a href="{{@site.url}}/minecraft-server/" class="sb-card sb-card-link">
+      <div class="sb-card-icon gr">⛏️</div>
+      <div class="sb-card-title">Minecraft Server on Ubuntu + AMP</div>
+      <div class="sb-card-desc">Set up a Fabric server with CubeCoders AMP on Ubuntu — the same stack that runs SpoonerCraft.</div>
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">Read guide →</div>
+    </a>
+    <a href="{{@site.url}}/cloudflare-tunnels-dns-records/" class="sb-card sb-card-link">
+      <div class="sb-card-icon te">☁️</div>
+      <div class="sb-card-title">Cloudflare Tunnels &amp; DNS</div>
+      <div class="sb-card-desc">Expose playmc.spoonerboy.com and this site with zero open router ports.</div>
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">Read guide →</div>
+    </a>
+    <a href="{{@site.url}}/mc-mods/" class="sb-card sb-card-link">
+      <div class="sb-card-icon bl">📦</div>
+      <div class="sb-card-title">SpoonerPack Modpack</div>
+      <div class="sb-card-desc">Download mods, resource packs, shaders, and the install guide for SpoonerCraft players.</div>
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">Get mods →</div>
+    </a>
+  </div>
+  <div class="sb-btn-row sb-reveal sb-reveal-d4" style="justify-content:flex-start;margin-top:20px;margin-bottom:0">
+    <a class="sb-btn sb-btn-ghost" href="{{@site.url}}/guides/">All server guides &rarr;</a>
+  </div>
+</div>
+
+<hr class="sb-divider">
+
+{{!-- POWERED BY HOMELAB — compact one row --}}
+<div class="sb-powered-by">
+  <div class="sb-powered-by-inner">
+    <div class="sb-powered-by-text">
+      <div class="sb-powered-by-label">Behind the scenes</div>
+      <div class="sb-powered-by-title">Powered by Homelab.Documented.</div>
+      <div class="sb-powered-by-desc">2 Raspberry Pis &middot; self-hosted &middot; $0 cloud bills &middot; full infrastructure docs at homelabdocumented.com</div>
+    </div>
+    <div class="sb-powered-by-actions">
+      <a class="sb-btn sb-btn-ghost" href="https://homelabdocumented.com" target="_blank" rel="noopener">homelabdocumented.com ↗</a>
+    </div>
+  </div>
+</div>

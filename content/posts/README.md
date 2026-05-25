@@ -47,5 +47,6 @@ If Excerpt is blank, the theme auto-pulls the first ~45 words from the post body
 ## Tips
 
 - Use **Excerpt** for the intro blurb at the top — don't repeat it as the first paragraph unless you want it twice.
+- Tag posts `minecraft` or `server-update` to show them in the homepage **What's new** feed.
 - Tag posts `lab-update` to show them in the **Currently Working On** feed on `/homelab/`.
 - Feature image is optional — set in post settings for a hero background image.

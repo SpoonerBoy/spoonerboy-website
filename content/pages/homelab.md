@@ -2,18 +2,13 @@
 title: Homelab Documented
 slug: homelab
 template: page-homelab
-custom_excerpt: A living record of everything in the lab. Full documentation, configs, and runbooks at homelabdocumented.com.
+custom_excerpt: Behind-the-scenes infrastructure for SpoonerCraft and spoonerboy.com. Full technical docs at homelabdocumented.com.
 ---
 
 <!--
-  HOW TO USE THIS FILE
-  =====================
-  The hero, stat row, active projects list, and lab-update feed are in page-homelab.hbs.
-
-  Paste the INTRO (markdown) and HARDWARE sections (HTML cards) below into Ghost Admin
-  → Pages → Homelab.
-
-  Stat numbers (2 Pis, 0 ports, etc.) are in page-homelab.hbs — edit there when hardware changes.
+  NOTE: Homelab is de-emphasized on spoonerboy.com (footer + this page only).
+  Deep guides (Pi-hole, Proxmox, UniFi) → homelabdocumented.com
+  spoonerboy.com/guides/ → server setup guides for gaming only
 -->
 
 
@@ -21,9 +16,9 @@ custom_excerpt: A living record of everything in the lab. Full documentation, co
      INTRO  (Markdown card)
      ═══════════════════════════════════════════════ -->
 
-Everything in the homelab gets documented — configs, gotchas, update notes, and full setup guides. Whether it's a fresh Pi-hole install, Cloudflare Tunnel routing, or rebuilding Proxmox from scratch, it's written down.
+Everything behind SpoonerCraft and spoonerboy.com runs from home — Raspberry Pis, an HP ProDesk, UniFi networking, and Cloudflare Tunnels. This page is the quick hardware overview.
 
-The full reference site lives at [homelabdocumented.com](https://homelabdocumented.com). This page is the quick overview of what's running at The Grays.
+**Full infrastructure documentation** — Pi-hole, Proxmox, network diagrams, configs — lives at [homelabdocumented.com](https://homelabdocumented.com).
 
 
 <!-- ═══════════════════════════════════════════════
