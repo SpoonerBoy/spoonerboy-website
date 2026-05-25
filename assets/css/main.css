@@ -621,6 +621,16 @@ form[data-members-form].error .message-error { display: block; }
 .sb-page-hero--image {
   min-height: 70vh;
 }
+.sb-page-hero--post {
+  min-height: auto;
+  padding: 110px 48px 56px;
+}
+.sb-page-hero--post .sb-page-hero-inner {
+  max-width: 720px;
+}
+.sb-page-hero--post .sb-page-meta {
+  justify-content: center;
+}
 .sb-page-hero-bg {
   position: absolute; inset: 0;
   background-size: cover;
@@ -711,6 +721,7 @@ form[data-members-form].error .message-error { display: block; }
   color: var(--muted);
   font-family: 'DM Mono', monospace;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .sb-page-hero--image .sb-page-meta { color: rgba(245,245,247,0.5); }
 

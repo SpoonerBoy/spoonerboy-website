@@ -1,7 +1,9 @@
 {{!< default}}
 
+{{#post}}
+
 {{!-- POST HERO --}}
-<section class="sb-page-hero {{#if feature_image}}sb-page-hero--image{{/if}}">
+<section class="sb-page-hero {{#if feature_image}}sb-page-hero--image{{else}}sb-page-hero--post{{/if}}">
   <div class="sb-hero-grid"></div>
   {{#if feature_image}}
     <div class="sb-page-hero-bg" style="background-image:url('{{feature_image}}')"></div>
@@ -23,7 +25,7 @@
     {{/if}}
     <div class="sb-page-meta">
       <span>{{date format="MMMM D, YYYY"}}</span>
-      <span>{{reading_time}}</span>
+      {{#if reading_time}}<span>{{reading_time}}</span>{{/if}}
       {{#primary_author}}<span>By {{name}}</span>{{/primary_author}}
     </div>
   </div>
@@ -31,14 +33,12 @@
 
 <hr class="sb-divider">
 
-{{!-- POST CONTENT --}}
-{{#post}}
+{{!-- POST BODY --}}
 <div class="sb-page-content-wrap">
   <div class="gh-content">
     {{content}}
   </div>
 </div>
-{{/post}}
 
 {{!-- PREV / NEXT POSTS --}}
 <hr class="sb-divider">
@@ -50,3 +50,5 @@
     <a class="sb-btn sb-btn-ghost" href="{{url}}" style="margin-left:auto">{{title}} &rarr;</a>
   {{/next_post}}
 </div>
+
+{{/post}}

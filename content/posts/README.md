@@ -6,17 +6,22 @@ Each `.md` file here is a source copy for a Ghost **post** (not a page).
 
 ## Per-post intro text at the top
 
-Every post shows a subtitle under the title in the hero area. Set it per post in Ghost Admin:
+Every post shows a **title**, **tags**, and **intro subtitle** in the hero area at the top. Set the intro in Ghost Admin:
 
 1. **Posts → [your post] → Settings (gear icon)**
-2. Fill in **Excerpt** (this is Ghost's *custom excerpt* field)
+2. **Excerpt** — this is the subtitle under the title (Ghost calls it `custom_excerpt` in the theme)
 3. Click **Update**
 
-That text appears under the post title on `post.hbs`. If you leave Excerpt blank, Ghost auto-generates one from the first paragraph of the post body.
+If Excerpt is blank, the theme auto-pulls the first ~45 words from the post body.
+
+**Important:** The post **Title** field (top of editor) fills the big H1. The **Excerpt** field fills the subtitle. Both are separate from the body content.
 
 **Example for Cloudflare Tunnels post:**
 
-> Expose self-hosted services to the internet with zero open router ports. This guide covers Cloudflare Tunnels, DNS records, and routing traffic to Ghost, Minecraft, and other homelab services.
+| Field | Value |
+|-------|-------|
+| Title | Cloudflare Tunnels & DNS Records |
+| Excerpt | Expose self-hosted services to the internet with zero open router ports. This guide covers Cloudflare Tunnels, DNS records, and routing traffic to Ghost, Minecraft, and other homelab services. |
 
 ---
 
